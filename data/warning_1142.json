@@ -1,0 +1,6567 @@
+{
+  "meta": {
+    "schema_version": "1.3",
+    "target_semester": "1142",
+    "edu_type": "theory",
+    "reference_data": "cross_analysis.json (111-1–114-1 training set, n=2666)",
+    "data_cutoff": "期中考後（含期中成績，final 待 ~14 天後產出）",
+    "total_students": 248,
+    "primary_rule": "QMI quintile (Q1=HIGH, Q2=MEDIUM, Q3-5=LOW)",
+    "secondary_rules": [
+      "W-R1-SURFACE-MIDFAIL",
+      "W-MIDTERM-FAIL",
+      "W-R-NO-BASELINE",
+      "W-S-NO-BASELINE",
+      "W-S-UNCLASSIFIED"
+    ],
+    "bas_formula": "v3.1: w_mid(local-z) + w_qmi(train-z) + w_neg_passive(train-z), renormalized",
+    "generated_at": "2026-07-03T09:41:02"
+  },
+  "summary": {
+    "HIGH": {
+      "count": 0,
+      "historical_fail_rate_ref": null
+    },
+    "MEDIUM": {
+      "count": 8,
+      "historical_fail_rate_ref": null
+    },
+    "LOW": {
+      "count": 240,
+      "historical_fail_rate_ref": null
+    }
+  },
+  "students": [
+    {
+      "masked_id": "310****69",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S4",
+      "learning_approach": "SURFACE",
+      "midterm_score": 0.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.2563,
+      "bas_score": -1.9316,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.2144,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****63",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S4",
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.6912,
+      "bas_score": -0.9136,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.2144,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****39",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.5824,
+      "bas_score": -0.8556,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****56",
+      "risk_level": "LOW",
+      "r_cluster": "R5",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 22.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.8522,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.25,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.5,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****25",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 28.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.4411,
+      "bas_score": -0.8382,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****70",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 40.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.3735,
+      "bas_score": -0.8129,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****43",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 24.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.7968,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****38",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S4",
+      "learning_approach": "SURFACE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.65,
+      "bas_score": -0.7762,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.2144,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****57",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 26.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.7414,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****41",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 28.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.686,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****42",
+      "risk_level": "LOW",
+      "r_cluster": "R2",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 28.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.686,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-R-NO-BASELINE(R2)",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": null,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": null,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****23",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 28.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.686,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****48",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 30.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.6306,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****50",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 30.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.6306,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****57",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 30.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.6306,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****26",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 32.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5751,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****36",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 32.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5751,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****57",
+      "risk_level": "LOW",
+      "r_cluster": "R5",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 34.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5197,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.25,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.5,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****45",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 34.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5197,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****53",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 34.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5197,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****51",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 34.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5197,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****47",
+      "risk_level": "LOW",
+      "r_cluster": "R5",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 34.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5197,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.25,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.5,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****59",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 34.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.5197,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****40",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.55,
+      "bas_score": -0.5094,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****38",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.6323,
+      "bas_score": -0.4529,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****15",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "DEEP",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.9735,
+      "bas_score": -0.4508,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****30",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 38.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.4089,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****27",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 38.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.4089,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****07",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "MODERATE",
+      "midterm_score": 44.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.4694,
+      "bas_score": -0.3622,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****51",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 40.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.3535,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****15",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 40.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.3535,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****12",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 40.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.3535,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****55",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 40.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.3535,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****36",
+      "risk_level": "LOW",
+      "r_cluster": "R2",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 40.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.3535,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-R-NO-BASELINE(R2)",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": null,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": null,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****12",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 40.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.3535,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****46",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.55,
+      "bas_score": -0.3156,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****54",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 42.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.298,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****16",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 42.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.298,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****25",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 42.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.298,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****45",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 42.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.298,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****19",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 42.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.298,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****28",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 42.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.298,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****47",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 44.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.2426,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****05",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 44.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.2426,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****41",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 44.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.2426,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****08",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 44.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.2426,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****06",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 44.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.2426,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****09",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 44.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.2426,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****47",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.5824,
+      "bas_score": -0.2365,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****03",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.65,
+      "bas_score": -0.2096,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****23",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.7237,
+      "bas_score": -0.1896,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****18",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1872,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****16",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1872,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****34",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1872,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****35",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1872,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****19",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1872,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****29",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1872,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****17",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 46.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1872,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****18",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.4473,
+      "bas_score": -0.1501,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****37",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S3",
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.6147,
+      "bas_score": -0.132,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****11",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****37",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****35",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****29",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****39",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****03",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****56",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****48",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****26",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 48.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.1318,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "111****21",
+      "risk_level": "MEDIUM",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.5277,
+      "bas_score": -0.1121,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R1-SURFACE-MIDFAIL",
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****56",
+      "risk_level": "LOW",
+      "r_cluster": "R4",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": 0.4824,
+      "bas_score": -0.1042,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1554,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7017,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****43",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0764,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****20",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0764,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****19",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0764,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****22",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0764,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****46",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0764,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****29",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0764,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****10",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 50.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0764,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****36",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S4",
+      "learning_approach": "DEEP",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": 0.85,
+      "bas_score": -0.0532,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.2144,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****21",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": 0.4912,
+      "bas_score": -0.0247,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****31",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0209,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****01",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0209,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****24",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0209,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****53",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0209,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****48",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0209,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****34",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0209,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****02",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 52.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": -0.0209,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****39",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****28",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****31",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****14",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****07",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****25",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****59",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****13",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****15",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S4",
+      "learning_approach": "SURFACE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.31,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.2144,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****49",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 54.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0345,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****53",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S4",
+      "learning_approach": "SURFACE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": 0.5324,
+      "bas_score": 0.0504,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.2144,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****43",
+      "risk_level": "LOW",
+      "r_cluster": "R4",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": 0.4824,
+      "bas_score": 0.0726,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1554,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7017,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****57",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****03",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****11",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****16",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****14",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****49",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****38",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****54",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****11",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****15",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****53",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****37",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****49",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 56.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.0899,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****32",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S4",
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": 0.6147,
+      "bas_score": 0.1365,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.2144,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****56",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S3",
+      "learning_approach": "DEEP",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": 0.9412,
+      "bas_score": 0.1434,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****10",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****28",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****04",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****36",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****44",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****08",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****32",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****22",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****42",
+      "risk_level": "LOW",
+      "r_cluster": "R2",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-R-NO-BASELINE(R2)",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": null,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": null,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****14",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****52",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****41",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****52",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 58.0,
+      "midterm_status": "FAIL",
+      "qmi": null,
+      "bas_score": 0.1453,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-MIDTERM-FAIL",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****14",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": 0.65,
+      "bas_score": 0.1522,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****03",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S2",
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": 0.6059,
+      "bas_score": 0.1659,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****46",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": 0.65,
+      "bas_score": 0.1735,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****52",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****19",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****36",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****30",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****43",
+      "risk_level": "LOW",
+      "r_cluster": "R2",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R-NO-BASELINE(R2)",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": null,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": null,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****48",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****47",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****03",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 60.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2007,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "111****20",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": 0.4206,
+      "bas_score": 0.2502,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****06",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****13",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****10",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****22",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****54",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****20",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****35",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": 0.66,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****15",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****33",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****03",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****56",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****27",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****30",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****07",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 62.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.2562,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****32",
+      "risk_level": "LOW",
+      "r_cluster": "R4",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": 0.55,
+      "bas_score": 0.2629,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1554,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7017,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****33",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": 0.5079,
+      "bas_score": 0.2714,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****11",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.3116,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****37",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.3116,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****35",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.3116,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****04",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.3116,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****05",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.3116,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****25",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 64.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.3116,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****27",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****38",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****08",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****21",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****17",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****46",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****23",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****21",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****24",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 66.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.367,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****54",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": "S3",
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": 0.8,
+      "bas_score": 0.3879,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****29",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 68.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4224,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****27",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 68.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4224,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****33",
+      "risk_level": "LOW",
+      "r_cluster": "R2",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 68.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4224,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R-NO-BASELINE(R2)",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": null,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": null,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****06",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 68.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4224,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****17",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 68.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4224,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****19",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 68.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4224,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****39",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 68.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4224,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****48",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S2",
+      "learning_approach": "SURFACE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": 0.6,
+      "bas_score": 0.4738,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1703,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****39",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****21",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****45",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****16",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****21",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****07",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": 0.4156,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****10",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****07",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****43",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****31",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****24",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 70.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.4778,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****20",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****40",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****13",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****24",
+      "risk_level": "LOW",
+      "r_cluster": "R2",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R-NO-BASELINE(R2)",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": null,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": null,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****40",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****02",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****09",
+      "risk_level": "LOW",
+      "r_cluster": "R2",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-R-NO-BASELINE(R2)",
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": null,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": null,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****46",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****14",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****02",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 72.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5332,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****47",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****08",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****38",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****34",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****44",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****32",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****23",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****41",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 74.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.5887,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****04",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "131****65",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****23",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****28",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****42",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****31",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****30",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****05",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****40",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****13",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "111****12",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": "S3",
+      "learning_approach": "SURFACE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": 0.2691,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": 0.1866,
+        "s_cluster_unclassified": false,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****56",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 76.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6441,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****46",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****18",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "121****05",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****07",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****32",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****42",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****12",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****20",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****22",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****12",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 78.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.6995,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****18",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****26",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****01",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****09",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****26",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****44",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****01",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****55",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 80.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.7549,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****49",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 82.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8103,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****44",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 82.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8103,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****55",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 82.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8103,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****32",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 82.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8103,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****55",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 82.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8103,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****49",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 82.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8103,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****06",
+      "risk_level": "LOW",
+      "r_cluster": "R3",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 82.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8103,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.1594,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.7399,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****18",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 84.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.8658,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****33",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 88.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 0.9766,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    },
+    {
+      "masked_id": "141****17",
+      "risk_level": "LOW",
+      "r_cluster": "R1",
+      "s_cluster": null,
+      "learning_approach": "MODERATE",
+      "midterm_score": 94.0,
+      "midterm_status": "PASS",
+      "qmi": null,
+      "bas_score": 1.1429,
+      "xgb_probability": null,
+      "risk_level_xgb": null,
+      "triggered_rules": [
+        "W-S-UNCLASSIFIED"
+      ],
+      "evidence": {
+        "qmi_quintile": 5,
+        "r_cluster_historical_fail_rate": 0.23,
+        "s_cluster_historical_fail_rate": null,
+        "s_cluster_unclassified": true,
+        "r_cluster_rescue_rate": 0.6468,
+        "qmi_threshold_mode": "ood",
+        "qmi_q1_hi_used": null,
+        "qmi_q2_hi_used": null
+      }
+    }
+  ]
+}
