@@ -4016,7 +4016,11 @@ function renderDTable(filtered) {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
-      const reg = await navigator.serviceWorker.register('./sw.js', { scope: './' });
+      const reg = await navigator.serviceWorker.register('./sw.js', {
+        scope: './',
+        updateViaCache: 'none',
+      });
+      reg.update().catch(() => {});
 
       reg.addEventListener('updatefound', () => {
         const newWorker = reg.installing;
