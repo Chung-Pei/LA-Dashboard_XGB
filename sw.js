@@ -9,7 +9,7 @@
 
 const CACHE_PREFIX = 'la-dash-v11-docs-cachefix';
 const DATA_CACHE_PREFIX = 'la-dash-v11-docs-cachefix-data';
-const BUILD_VERSION = '202607031814';
+const BUILD_VERSION = '202607031700';
 
 const CACHE_VERSION = `${CACHE_PREFIX}-${BUILD_VERSION}`;
 const DATA_CACHE = `${DATA_CACHE_PREFIX}-${BUILD_VERSION}`;
@@ -27,21 +27,21 @@ const APP_SHELL = [
   './js/vendor/chart.umd.min.js',
   './js/vendor/chartjs-plugin-annotation.min.js',
   './js/frame-guard.js',
-  './js/filter-engine.js?v=202607031814',
-  './js/main.js?v=202607031814',
+  './js/filter-engine.js?v=202607031700',
+  './js/main.js?v=202607031700',
   './js/vendor/d3.min.js',
-  './js/chart-registry.js?v=202607031814',
-  './js/help-modal.js?v=202607031814',
-  './js/behavior-loader.js?v=202607031814',
-  './js/tab-behavior-radar.js?v=202607031814',
-  './js/tab-behavior-correlation.js?v=202607031814',
-  './js/tab-behavior-time.js?v=202607031814',
-  './js/tab-behavior-lsa.js?v=202607031814',
-  './js/tab-behavior-cross.js?v=202607031814',
-  './js/tab-behavior-warning.js?v=202607031814',
-  './js/behavior-init.js?v=202607031814',
-  './js/at-risk-report.js?v=202607031814',
-  './js/print-panel.js?v=202607031814',
+  './js/chart-registry.js?v=202607031700',
+  './js/help-modal.js?v=202607031700',
+  './js/behavior-loader.js?v=202607031700',
+  './js/tab-behavior-radar.js?v=202607031700',
+  './js/tab-behavior-correlation.js?v=202607031700',
+  './js/tab-behavior-time.js?v=202607031700',
+  './js/tab-behavior-lsa.js?v=202607031700',
+  './js/tab-behavior-cross.js?v=202607031700',
+  './js/tab-behavior-warning.js?v=202607031700',
+  './js/behavior-init.js?v=202607031700',
+  './js/at-risk-report.js?v=202607031700',
+  './js/print-panel.js?v=202607031700',
 ];
 
 self.addEventListener('install', (event) => {
@@ -125,7 +125,7 @@ function isStaticAsset(url) {
 }
 
 async function cacheFirst(request) {
-  const cached = await caches.match(request);
+  const cached = await caches.match(request, { cacheName: CACHE_VERSION });
   if (cached) return cached;
 
   try {
@@ -177,7 +177,7 @@ async function networkFirst(request) {
     }
     return response;
   } catch {
-    const cached = await caches.match(request);
+    const cached = await caches.match(request, { cacheName: CACHE_VERSION });
     if (cached) return cached;
     return new Response('離線中', {
       status: 503,
