@@ -515,8 +515,16 @@ const BehaviorTabManager = (() => {
 
   async function switchSub(sub) {
     _setSubBtn(sub);
+    // BUG-BI-2 FIX: 子面板在 HTML 中以 style="display:none" 初始隱藏，
+    // 但 is-hidden class 移除後 inline style 仍具最高優先權導致面板不顯示。
+    // 解法：顯示目標面板時一併清除 inline display，
+    // 隱藏面板則統一透過 is-hidden class 控制。
     document.querySelectorAll('.behavior-sub-pane').forEach(p => {
-      p.classList.toggle('is-hidden', p.id !== `sub-${sub}`);
+      const isTarget = p.id === `sub-${sub}`;
+      p.classList.toggle('is-hidden', !isTarget);
+      if (isTarget) {
+        p.style.removeProperty('display');
+      }
     });
     let didInit = false;
 

@@ -4125,9 +4125,12 @@ function withPrintablePanelsVisible(task) {
     p.style.setProperty('width',          '1200px');
     p.style.setProperty('pointer-events', 'none');
   });
+  // BUG-BI-2 CSP FIX: 子面板改用 is-hidden class 控制顯示/隱藏，
+  // 避免 inline style 在 restore 時被寫回 display:none，
+  // 導致 switchSub() 的 class-based 切換失效。
   const subPanes = [...document.querySelectorAll('.behavior-sub-pane')];
-  const subPaneOriginals = subPanes.map(p => ({ el: p, display: p.style.display }));
-  subPanes.forEach(p => { p.style.setProperty('display', 'block'); });
+  const subPaneOriginals = subPanes.map(p => ({ el: p, wasHidden: p.classList.contains('is-hidden') }));
+  subPanes.forEach(p => { p.classList.remove('is-hidden'); p.style.removeProperty('display'); });
   try {
     return task();
   } finally {
@@ -4140,7 +4143,7 @@ function withPrintablePanelsVisible(task) {
       el.style.setProperty('width',          width          ?? '');
       el.style.setProperty('pointer-events', pointerEvents  ?? '');
     });
-    subPaneOriginals.forEach(({ el, display }) => { el.style.setProperty('display', display ?? ''); });
+    subPaneOriginals.forEach(({ el, wasHidden }) => { el.classList.toggle('is-hidden', wasHidden); });
   }
 }
 

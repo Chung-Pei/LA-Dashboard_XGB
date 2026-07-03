@@ -267,8 +267,9 @@ const PrintPanel = (() => {
       width: el.style.width,
       pointerEvents: el.style.pointerEvents,
     }));
+    // BUG-BI-2 CSP FIX: 子面板改用 is-hidden class 控制顯示/隱藏
     const panes = [...document.querySelectorAll(".behavior-sub-pane")];
-    const paneStyles = panes.map((el) => ({ el, display: el.style.display }));
+    const paneStates = panes.map((el) => ({ el, wasHidden: el.classList.contains('is-hidden') }));
 
     panels.forEach((el) => {
       el.style.setProperty('display',        'block');
@@ -279,7 +280,7 @@ const PrintPanel = (() => {
       el.style.setProperty('width',          '1200px');
       el.style.setProperty('pointer-events', 'none');
     });
-    panes.forEach((el) => { el.style.setProperty('display', 'block'); });
+    panes.forEach((el) => { el.classList.remove('is-hidden'); el.style.removeProperty('display'); });
 
     try {
       return task();
@@ -294,7 +295,7 @@ const PrintPanel = (() => {
         el.style.setProperty('width',          width          ?? '');
         el.style.setProperty('pointer-events', pointerEvents  ?? '');
       });
-      paneStyles.forEach(({ el, display }) => { el.style.setProperty('display', display ?? ''); });
+      paneStates.forEach(({ el, wasHidden }) => { el.classList.toggle('is-hidden', wasHidden); });
     }
   }
 
