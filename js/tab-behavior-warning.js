@@ -327,7 +327,7 @@ const BehaviorWarningTab = (() => {
         <div class="warning-stat-box" data-wlevel-color="${meta.color}">
           <div class="warning-stat-label" data-wlevel-color="${meta.color}">${meta.label}</div>
           <div class="warning-stat-value">${Number(value.count || 0)} 人</div>
-          <div class="warning-stat-sub">歷史參考不及格率 ${_pct(value.historical_fail_rate_ref)}</div>
+          <div class="warning-stat-sub">歷史參考不及格率 ${value.historical_fail_rate_ref != null ? _pct(value.historical_fail_rate_ref) : '<span class="warning-muted-note" style="color:var(--text-dim,#888)">未計算/資料不足</span>'}</div>
         </div>`;
     }).join("");
 
@@ -556,9 +556,9 @@ const BehaviorWarningTab = (() => {
           <td>${_safeText(APPROACH_NAMES[student.learning_approach] || student.learning_approach || "--")}</td>
           <td>${student.midterm_score != null ? Number(student.midterm_score).toFixed(1) : "--"}${student.midterm_status === "FAIL" ? ' <span class="ladash-fail-text">(不及格)</span>' : ""}</td>
           <td>${student.qmi != null ? Number(student.qmi).toFixed(3) : "--"}</td>
-          <td>${student.bas_score != null ? Number(student.bas_score).toFixed(2) : "--"}</td>
-          <td>${student.xgb_probability != null ? _pct(student.xgb_probability) : "-"}</td>
-          <td>${student.risk_level_xgb != null ? _safeText(student.risk_level_xgb) : "-"}</td>
+          <td>${student.bas_score != null ? student.bas_score.toFixed(4) : "-"}</td>
+          <td>${student.xgb_probability != null ? _pct(student.xgb_probability) : '<span style="color:var(--text-dim,#888)">模型未產出</span>'}</td>
+          <td>${student.risk_level_xgb != null ? _safeText(student.risk_level_xgb) : '<span style="color:var(--text-dim,#888)">模型未產出</span>'}</td>
           <td>${rules}</td>
           ${finalScoreCell}${outcomeCell}
         </tr>`;

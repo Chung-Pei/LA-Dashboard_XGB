@@ -358,22 +358,22 @@ const BehaviorCrossTab = (() => {
           </div>
           <div class="cross-stat-box">
             <div class="cross-stat-label">BAS 複合評分</div>
-            <div class="cross-stat-value">r = ${_safeText(bv.bas_r?.r ?? '—')}</div>
+            <div class="cross-stat-value">${bv.bas_r?.r != null ? 'r = ' + _safeText(bv.bas_r.r) : '<span class="cross-muted-note">訓練中/資料不足</span>'}</div>
             <div class="cross-stat-sub">期中×0.35 + QMI×0.30 + (1−被動)×0.20 + 練習×0.15</div>
           </div>
           <div class="cross-stat-box">
             <div class="cross-stat-label">QMI 五分位梯度</div>
-            <div class="cross-stat-value">${q1 && q5 ? `${_pct(q1.fail_rate)} → ${_pct(q5.fail_rate)}` : '—'}</div>
+            <div class="cross-stat-value">${q1?.fail_rate != null && q5?.fail_rate != null ? `${_pct(q1.fail_rate)} → ${_pct(q5.fail_rate)}` : '<span class="cross-muted-note">訓練中/資料不足</span>'}</div>
             <div class="cross-stat-sub">${q1 && q5 ? `Q1（最低）vs Q5（最高），n=${_safeText(q1.n)}/${_safeText(q5.n)}` : '資料不足'}</div>
           </div>
           <div class="cross-stat-box">
             <div class="cross-stat-label">R群 × 期末 Spearman</div>
-            <div class="cross-stat-value">ρ = ${_safeText(rSp.rho ?? '—')}</div>
+            <div class="cross-stat-value">${rSp.rho != null ? 'ρ = ' + _safeText(rSp.rho) : '<span class="cross-muted-note">資料不足</span>'}</div>
             <div class="cross-stat-sub">${_safeText(rSp.note || '')}</div>
           </div>
           <div class="cross-stat-box">
             <div class="cross-stat-label">S群 × 期末 Spearman</div>
-            <div class="cross-stat-value">ρ = ${_safeText(sSp.rho ?? '—')}</div>
+            <div class="cross-stat-value">${sSp.rho != null ? 'ρ = ' + _safeText(sSp.rho) : '<span class="cross-muted-note">資料不足</span>'}</div>
             <div class="cross-stat-sub">${_safeText(sSp.note || '')}</div>
           </div>
           <div class="cross-stat-box">

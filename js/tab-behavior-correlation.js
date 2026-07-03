@@ -160,6 +160,18 @@ const BehaviorCorrelationTab = (() => {
     return raw;
   }
 
+  // Inject filter bar CSS that was missing
+  const _FILTER_CSS = `
+    .ladash-c-filter-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 15px; }
+    .ladash-c-flex5 { display: flex; gap: 6px; align-items: center; }
+    .ladash-c-sm8-bold-nw { font-size: 0.85rem; font-weight: bold; white-space: nowrap; color: var(--text, #eee); }
+    .ladash-c-sm78-nw { font-size: 0.78rem; white-space: nowrap; color: var(--text-dim, #888); }
+    .ladash-c-filter-sel { padding: 4px 8px; font-size: 0.8rem; border-radius: 4px; background: var(--surface3, #2a2f45); color: var(--text, #eee); border: 1px solid var(--border, #3a405a); outline: none; }
+  `;
+  const styleEl = document.createElement("style");
+  styleEl.textContent = _FILTER_CSS;
+  document.head.appendChild(styleEl);
+
   /**
    * Ph2b 新增：讀取 p-value（僅 Pearson 模式下有效）。
    */
