@@ -4047,6 +4047,22 @@ if ('serviceWorker' in navigator) {
       window.location.reload();
     }
   });
+
+  // [FIX] iOS standalone PWA 從背景恢復時不會重新觸發 'load' 事件，
+  // reg.update() 若只在 load 執行一次，之後恢復 app 永遠不會再檢查新版 SW，
+  // 造成「已部署新版但打開 App 仍是舊版」。改為 visibility 恢復 / bfcache 還原時
+  // 也主動觸發一次 update() 檢查。
+  const _recheckUpdate = () => {
+    navigator.serviceWorker.getRegistration()
+      .then((reg) => reg?.update().catch(() => {}))
+      .catch(() => {});
+  };
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') _recheckUpdate();
+  });
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) _recheckUpdate();
+  });
 }
 
 function showUpdateBanner(worker) {
