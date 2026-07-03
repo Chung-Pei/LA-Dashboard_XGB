@@ -1,10 +1,10 @@
 {
   "week_limit": 12,
-  "auc": 0.7563,
-  "precision": 0.4689,
-  "recall": 0.2883,
-  "f1": 0.3571,
-  "accuracy": 0.8063,
+  "auc": 0.7754,
+  "precision": 0.4785,
+  "recall": 0.2923,
+  "f1": 0.363,
+  "accuracy": 0.8086,
   "feature_version": "v3",
   "model_version": "xgb_v3",
   "training_semesters": [
@@ -29,23 +29,23 @@
     "4tech": {
       "high": 0.3,
       "medium": 0.3,
-      "high_precision": 0.4335,
+      "high_precision": 0.4481,
       "n": 695
     },
     "2tech": {
       "high": 0.3,
       "medium": 0.3,
-      "high_precision": 0.3932,
+      "high_precision": 0.4303,
       "n": 1964
     },
     "combined": {
       "high": 0.3,
       "medium": 0.3,
-      "high_precision": 0.4087
+      "high_precision": 0.4374
     },
     "calibration_basis": "cv_proba_per_type",
     "target_precision_4tech": 0.2604,
     "target_precision_2tech": 0.1604
   },
-  "generated_at": "2026-07-03T16:02:23"
+  "generated_at": "2026-07-03T18:09:38"
 }
