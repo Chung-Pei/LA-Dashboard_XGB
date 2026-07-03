@@ -1,4 +1,4 @@
-# 學習分析儀表板 · Learning Analytics Dashboard V6 XGB
+# 學習分析儀表板 · Learning Analytics Dashboard V6 XG
 
 <!-- PROJECT SHIELDS -->
 
