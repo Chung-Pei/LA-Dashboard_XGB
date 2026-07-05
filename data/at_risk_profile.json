@@ -13,12 +13,12 @@
   "default_semester": "114(2)",
   "course_id": "1141111900055011A0",
   "course_name": "微生物及免疫學",
-  "generated_at": "2026-07-03T20:48:04.575873",
+  "generated_at": "2026-07-05T18:14:13.654205",
   "all_semesters": {
     "semester": "all",
     "course_id": "1141111900055011A0",
     "course_name": "微生物及免疫學",
-    "generated_at": "2026-07-03T20:48:04.538603",
+    "generated_at": "2026-07-05T18:14:13.632095",
     "cohort_summary": {
       "total_students": 2697,
       "pass_count": 2094,
@@ -116,7 +116,7 @@
       "semester": "111(1)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.499290",
+      "generated_at": "2026-07-05T18:14:13.557793",
       "cohort_summary": {
         "total_students": 443,
         "pass_count": 410,
@@ -206,7 +206,7 @@
       "semester": "111(2)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.508401",
+      "generated_at": "2026-07-05T18:14:13.570008",
       "cohort_summary": {
         "total_students": 193,
         "pass_count": 165,
@@ -237,10 +237,10 @@
           "raw_fail_median": 0.0204
         },
         "pre_exam_intensity": {
-          "pass_median_normalized": 9.0,
-          "fail_median_normalized": 0.0,
-          "gap_percentage": "-100.0%",
-          "raw_pass_median": 0.2242,
+          "pass_median_normalized": 50.0,
+          "fail_median_normalized": 50.0,
+          "gap_percentage": "+0.0%",
+          "raw_pass_median": 0.0,
           "raw_fail_median": 0.0
         },
         "learning_stability": {
@@ -302,7 +302,7 @@
       "semester": "112(1)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.511867",
+      "generated_at": "2026-07-05T18:14:13.580956",
       "cohort_summary": {
         "total_students": 460,
         "pass_count": 408,
@@ -333,8 +333,8 @@
           "raw_fail_median": 0.2041
         },
         "pre_exam_intensity": {
-          "pass_median_normalized": 50.0,
-          "fail_median_normalized": 50.0,
+          "pass_median_normalized": 0.0,
+          "fail_median_normalized": 0.0,
           "gap_percentage": "+0.0%",
           "raw_pass_median": 0.0,
           "raw_fail_median": 0.0
@@ -399,7 +399,7 @@
       "semester": "112(2)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.516291",
+      "generated_at": "2026-07-05T18:14:13.597802",
       "cohort_summary": {
         "total_students": 202,
         "pass_count": 172,
@@ -502,7 +502,7 @@
       "semester": "113(1)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.519997",
+      "generated_at": "2026-07-05T18:14:13.606765",
       "cohort_summary": {
         "total_students": 449,
         "pass_count": 420,
@@ -571,7 +571,7 @@
       "semester": "113(2)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.525831",
+      "generated_at": "2026-07-05T18:14:13.614995",
       "cohort_summary": {
         "total_students": 198,
         "pass_count": 115,
@@ -674,7 +674,7 @@
       "semester": "114(1)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.529547",
+      "generated_at": "2026-07-05T18:14:13.621092",
       "cohort_summary": {
         "total_students": 504,
         "pass_count": 404,
@@ -764,7 +764,7 @@
       "semester": "114(2)",
       "course_id": "1141111900055011A0",
       "course_name": "微生物及免疫學",
-      "generated_at": "2026-07-03T20:48:04.535704",
+      "generated_at": "2026-07-05T18:14:13.630066",
       "cohort_summary": {
         "total_students": 248,
         "pass_count": 0,
