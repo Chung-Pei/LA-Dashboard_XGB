@@ -13,40 +13,40 @@
   "default_semester": "114(2)",
   "course_id": "",
   "course_name": "",
-  "generated_at": "2026-07-11T16:16:29.613312",
+  "generated_at": "2026-07-11T17:01:57.432840",
   "all_semesters": {
     "semester": "all",
     "course_id": "",
     "course_name": "",
-    "generated_at": "2026-07-11T16:16:29.564577",
+    "generated_at": "2026-07-11T17:01:57.385957",
     "cohort_summary": {
-      "total_students": 2915,
-      "pass_count": 2096,
-      "fail_count": 562,
-      "unsettled_count": 257,
-      "fail_rate_pct": 21.1
+      "total_students": 2914,
+      "pass_count": 2227,
+      "fail_count": 680,
+      "unsettled_count": 7,
+      "fail_rate_pct": 23.4
     },
     "metrics_comparison": {
       "text_material_completion": {
-        "pass_median_normalized": 44.3,
+        "pass_median_normalized": 42.9,
         "fail_median_normalized": 31.4,
-        "gap_percentage": "-29.1%",
-        "raw_pass_median": 0.4247,
+        "gap_percentage": "-26.8%",
+        "raw_pass_median": 0.411,
         "raw_fail_median": 0.3014
       },
       "supplementary_completion": {
-        "pass_median_normalized": 16.7,
-        "fail_median_normalized": 10.0,
-        "gap_percentage": "-40.1%",
+        "pass_median_normalized": 14.3,
+        "fail_median_normalized": 5.7,
+        "gap_percentage": "-60.1%",
         "raw_pass_median": 0.1351,
-        "raw_fail_median": 0.0811
+        "raw_fail_median": 0.0541
       },
       "tutoring_resource_rate": {
-        "pass_median_normalized": 19.1,
-        "fail_median_normalized": 11.9,
-        "gap_percentage": "-37.7%",
-        "raw_pass_median": 0.1633,
-        "raw_fail_median": 0.102
+        "pass_median_normalized": 15.2,
+        "fail_median_normalized": 8.7,
+        "gap_percentage": "-42.8%",
+        "raw_pass_median": 0.1429,
+        "raw_fail_median": 0.0816
       },
       "pre_exam_intensity": {
         "pass_median_normalized": 0.0,
@@ -56,18 +56,18 @@
         "raw_fail_median": 0.0
       },
       "learning_stability": {
-        "pass_median_normalized": 25.2,
-        "fail_median_normalized": 24.8,
-        "gap_percentage": "-1.6%",
-        "raw_pass_median": 0.2037,
-        "raw_fail_median": 0.2002
+        "pass_median_normalized": 25.7,
+        "fail_median_normalized": 26.9,
+        "gap_percentage": "+4.7%",
+        "raw_pass_median": 0.2082,
+        "raw_fail_median": 0.2176
       },
       "audio_material_hours": {
         "pass_median_normalized": 0.2,
-        "fail_median_normalized": 0.2,
-        "gap_percentage": "+0.0%",
-        "raw_pass_median": 108.225,
-        "raw_fail_median": 116.025
+        "fail_median_normalized": 0.1,
+        "gap_percentage": "-50.0%",
+        "raw_pass_median": 94.92,
+        "raw_fail_median": 79.31
       }
     },
     "behavioral_markers": {
@@ -76,21 +76,21 @@
         "pass_group_mode": 0,
         "critical_weeks": [
           10,
-          11
+          13
         ]
       },
       "low_completion_flags": [
         {
           "metric": "supplementary_completion",
           "threshold_pct": 20,
-          "ratio_in_fail_group": 0.603,
-          "ratio_in_pass_group": 0.531
+          "ratio_in_fail_group": 0.635,
+          "ratio_in_pass_group": 0.54
         },
         {
           "metric": "tutoring_resource_rate",
           "threshold_pct": 20,
-          "ratio_in_fail_group": 0.587,
-          "ratio_in_pass_group": 0.536
+          "ratio_in_fail_group": 0.628,
+          "ratio_in_pass_group": 0.548
         }
       ]
     },
@@ -99,52 +99,52 @@
       "midterm_week_num": 8,
       "consecutive_zero_weeks": {
         "fail_group_median": 7.0,
-        "pass_group_median": 5.0
+        "pass_group_median": 6.0
       },
       "post_midterm_decay_rate": {
-        "fail_group_median_pct": 9.3,
-        "pass_group_median_pct": -12.6
+        "fail_group_median_pct": -4.2,
+        "pass_group_median_pct": -14.7
       },
       "weekly_activity_series": {
         "fail_group": {
-          "Week 1": 200.5,
-          "Week 2": 191.6,
-          "Week 3": 132.8,
-          "Week 4": 213.4,
-          "Week 5": 448.1,
-          "Week 6": 215.2,
-          "Week 7": 365.2,
-          "Week 8": 413.0,
-          "Week 9": 122.6,
-          "Week 10": 61.1,
-          "Week 11": 129.3,
-          "Week 12": 251.3,
-          "Week 13": 187.6,
-          "Week 14": 287.2,
-          "Week 15": 298.1,
-          "Week 16": 890.8,
-          "Week 17": 297.6,
-          "Week 18": 232.0
+          "Week 1": 178.3,
+          "Week 2": 176.3,
+          "Week 3": 126.3,
+          "Week 4": 186.6,
+          "Week 5": 388.0,
+          "Week 6": 215.3,
+          "Week 7": 427.4,
+          "Week 8": 388.0,
+          "Week 9": 120.1,
+          "Week 10": 53.5,
+          "Week 11": 115.8,
+          "Week 12": 217.9,
+          "Week 13": 155.4,
+          "Week 14": 237.8,
+          "Week 15": 246.9,
+          "Week 16": 737.7,
+          "Week 17": 246.5,
+          "Week 18": 192.2
         },
         "pass_group": {
-          "Week 1": 286.6,
-          "Week 2": 176.9,
-          "Week 3": 215.9,
-          "Week 4": 210.2,
-          "Week 5": 192.0,
-          "Week 6": 262.8,
-          "Week 7": 419.8,
+          "Week 1": 272.9,
+          "Week 2": 172.0,
+          "Week 3": 209.4,
+          "Week 4": 206.2,
+          "Week 5": 189.9,
+          "Week 6": 262.1,
+          "Week 7": 406.8,
           "Week 8": 403.3,
-          "Week 9": 128.5,
-          "Week 10": 110.0,
-          "Week 11": 204.2,
-          "Week 12": 105.9,
-          "Week 13": 140.1,
-          "Week 14": 267.8,
-          "Week 15": 336.1,
-          "Week 16": 402.2,
-          "Week 17": 321.4,
-          "Week 18": 185.4
+          "Week 9": 130.5,
+          "Week 10": 107.2,
+          "Week 11": 195.2,
+          "Week 12": 106.5,
+          "Week 13": 131.8,
+          "Week 14": 252.0,
+          "Week 15": 316.4,
+          "Week 16": 378.6,
+          "Week 17": 302.5,
+          "Week 18": 174.5
         }
       }
     },
@@ -153,21 +153,21 @@
         "severity": "critical",
         "metric": "tutoring_resource_rate",
         "trigger_condition": "ratio_in_fail_group >= 0.40",
-        "finding": "59% 的不及格學生輔導資源完成率低於 20%，遠高於及格組的 54%。",
+        "finding": "63% 的不及格學生輔導資源完成率低於 20%，遠高於及格組的 55%。",
         "action": "建議下學期開學第一週即宣導輔導資源使用方式，並於第 4 週前設定強制完成里程碑。"
       },
       {
         "severity": "warning",
         "metric": "supplementary_completion",
         "trigger_condition": "gap_percentage <= -40.0%",
-        "finding": "不及格群體門檻解鎖教材（整理筆記/補充教材/動畫）完成率比及格組低 40.1%，顯示知識內化過程可能提早中斷。",
+        "finding": "不及格群體門檻解鎖教材（整理筆記/補充教材/動畫）完成率比及格組低 60.1%，顯示知識內化過程可能提早中斷。",
         "action": "建議將 SUP 類教材設計為分段式（每 2 週一個里程碑），並在完成率低於 30% 時觸發自動提醒。"
       },
       {
         "severity": "warning",
         "metric": "consecutive_zero_weeks",
         "trigger_condition": "fail_group_median >= 2",
-        "finding": "不及格學生連續零活動週數中位數達 7.0 週，及格組為 5.0 週。",
+        "finding": "不及格學生連續零活動週數中位數達 7.0 週，及格組為 6.0 週。",
         "action": "建議設定「超過 2 週無學習活動」自動通知機制，並於關鍵週（如期中考後第 1 週）由教師主動聯繫學生。"
       }
     ]
@@ -177,7 +177,7 @@
       "semester": "111(1)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.497282",
+      "generated_at": "2026-07-11T17:01:57.313758",
       "cohort_summary": {
         "total_students": 479,
         "pass_count": 410,
@@ -328,7 +328,7 @@
       "semester": "111(2)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.507608",
+      "generated_at": "2026-07-11T17:01:57.324034",
       "cohort_summary": {
         "total_students": 224,
         "pass_count": 165,
@@ -485,7 +485,7 @@
       "semester": "112(1)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.516011",
+      "generated_at": "2026-07-11T17:01:57.331015",
       "cohort_summary": {
         "total_students": 507,
         "pass_count": 408,
@@ -636,7 +636,7 @@
       "semester": "112(2)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.526207",
+      "generated_at": "2026-07-11T17:01:57.341092",
       "cohort_summary": {
         "total_students": 236,
         "pass_count": 172,
@@ -800,7 +800,7 @@
       "semester": "113(1)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.534490",
+      "generated_at": "2026-07-11T17:01:57.347480",
       "cohort_summary": {
         "total_students": 474,
         "pass_count": 422,
@@ -931,7 +931,7 @@
       "semester": "113(2)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.544533",
+      "generated_at": "2026-07-11T17:01:57.358840",
       "cohort_summary": {
         "total_students": 236,
         "pass_count": 115,
@@ -1095,7 +1095,7 @@
       "semester": "114(1)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.552009",
+      "generated_at": "2026-07-11T17:01:57.366626",
       "cohort_summary": {
         "total_students": 509,
         "pass_count": 404,
@@ -1186,12 +1186,12 @@
           "fail_group": {
             "Week 1": 134.7,
             "Week 2": 197.1,
-            "Week 3": 181.3,
+            "Week 3": 183.7,
             "Week 4": 101.7,
             "Week 5": 171.4,
             "Week 6": 290.9,
             "Week 7": 115.5,
-            "Week 8": 219.1,
+            "Week 8": 216.6,
             "Week 9": 187.2,
             "Week 10": 41.7,
             "Week 11": 76.2,
@@ -1253,49 +1253,49 @@
       "semester": "114(2)",
       "course_id": "",
       "course_name": "",
-      "generated_at": "2026-07-11T16:16:29.562918",
+      "generated_at": "2026-07-11T17:01:57.377096",
       "cohort_summary": {
-        "total_students": 250,
-        "pass_count": 0,
-        "fail_count": 0,
-        "unsettled_count": 250,
-        "fail_rate_pct": 0.0
+        "total_students": 249,
+        "pass_count": 131,
+        "fail_count": 118,
+        "unsettled_count": 0,
+        "fail_rate_pct": 47.4
       },
       "metrics_comparison": {
         "text_material_completion": {
-          "pass_median_normalized": 0.0,
-          "fail_median_normalized": 0.0,
-          "gap_percentage": "+0.0%",
-          "raw_pass_median": 0.0,
-          "raw_fail_median": 0.0
+          "pass_median_normalized": 38.2,
+          "fail_median_normalized": 29.4,
+          "gap_percentage": "-23.0%",
+          "raw_pass_median": 0.3562,
+          "raw_fail_median": 0.274
         },
         "supplementary_completion": {
-          "pass_median_normalized": 0.0,
-          "fail_median_normalized": 0.0,
-          "gap_percentage": "+0.0%",
-          "raw_pass_median": 0.0,
-          "raw_fail_median": 0.0
+          "pass_median_normalized": 8.6,
+          "fail_median_normalized": 5.7,
+          "gap_percentage": "-33.7%",
+          "raw_pass_median": 0.0811,
+          "raw_fail_median": 0.0541
         },
         "tutoring_resource_rate": {
-          "pass_median_normalized": 0.0,
-          "fail_median_normalized": 0.0,
-          "gap_percentage": "+0.0%",
-          "raw_pass_median": 0.0,
-          "raw_fail_median": 0.0
+          "pass_median_normalized": 4.3,
+          "fail_median_normalized": 2.2,
+          "gap_percentage": "-48.8%",
+          "raw_pass_median": 0.0408,
+          "raw_fail_median": 0.0204
         },
         "pre_exam_intensity": {
-          "pass_median_normalized": 0.0,
-          "fail_median_normalized": 0.0,
-          "gap_percentage": "+0.0%",
-          "raw_pass_median": 0.0,
-          "raw_fail_median": 0.0
+          "pass_median_normalized": 4.3,
+          "fail_median_normalized": 4.6,
+          "gap_percentage": "+7.0%",
+          "raw_pass_median": 0.1008,
+          "raw_fail_median": 0.1096
         },
         "learning_stability": {
-          "pass_median_normalized": 0.0,
-          "fail_median_normalized": 0.0,
-          "gap_percentage": "+0.0%",
-          "raw_pass_median": 0.0,
-          "raw_fail_median": 0.0
+          "pass_median_normalized": 39.8,
+          "fail_median_normalized": 40.2,
+          "gap_percentage": "+1.0%",
+          "raw_pass_median": 0.3186,
+          "raw_fail_median": 0.3218
         },
         "audio_material_hours": {
           "pass_median_normalized": 0.0,
@@ -1309,14 +1309,103 @@
         "zero_week_distribution": {
           "fail_group_mode": 0,
           "pass_group_mode": 0,
-          "critical_weeks": []
+          "critical_weeks": [
+            13,
+            14
+          ]
         },
-        "low_completion_flags": []
+        "low_completion_flags": [
+          {
+            "metric": "supplementary_completion",
+            "threshold_pct": 20,
+            "ratio_in_fail_group": 0.788,
+            "ratio_in_pass_group": 0.672
+          },
+          {
+            "metric": "tutoring_resource_rate",
+            "threshold_pct": 20,
+            "ratio_in_fail_group": 0.822,
+            "ratio_in_pass_group": 0.748
+          }
+        ]
       },
       "temporal_decay": {
-        "available": false
+        "available": true,
+        "midterm_week_num": 9,
+        "consecutive_zero_weeks": {
+          "fail_group_median": 9.0,
+          "pass_group_median": 9.0
+        },
+        "post_midterm_decay_rate": {
+          "fail_group_median_pct": -93.2,
+          "pass_group_median_pct": -85.5
+        },
+        "weekly_activity_series": {
+          "fail_group": {
+            "Week 1": 71.6,
+            "Week 2": 102.9,
+            "Week 3": 92.7,
+            "Week 4": 57.8,
+            "Week 5": 98.4,
+            "Week 6": 215.6,
+            "Week 7": 727.0,
+            "Week 8": 269.9,
+            "Week 9": 108.3,
+            "Week 10": 17.1,
+            "Week 11": 50.7,
+            "Week 12": 57.0,
+            "Week 13": 0.0,
+            "Week 14": 0.0,
+            "Week 15": 0.0,
+            "Week 16": 0.0,
+            "Week 17": 0.0,
+            "Week 18": 0.0
+          },
+          "pass_group": {
+            "Week 1": 55.2,
+            "Week 2": 93.4,
+            "Week 3": 104.9,
+            "Week 4": 142.7,
+            "Week 5": 156.4,
+            "Week 6": 249.9,
+            "Week 7": 197.8,
+            "Week 8": 403.2,
+            "Week 9": 162.9,
+            "Week 10": 62.9,
+            "Week 11": 51.3,
+            "Week 12": 115.5,
+            "Week 13": 0.0,
+            "Week 14": 0.0,
+            "Week 15": 0.0,
+            "Week 16": 0.0,
+            "Week 17": 0.0,
+            "Week 18": 0.0
+          }
+        }
       },
-      "prescriptive_summary": []
+      "prescriptive_summary": [
+        {
+          "severity": "critical",
+          "metric": "tutoring_resource_rate",
+          "trigger_condition": "ratio_in_fail_group >= 0.40",
+          "finding": "82% 的不及格學生輔導資源完成率低於 20%，遠高於及格組的 75%。",
+          "action": "建議下學期開學第一週即宣導輔導資源使用方式，並於第 4 週前設定強制完成里程碑。"
+        },
+        {
+          "severity": "critical",
+          "metric": "post_midterm_decay_rate",
+          "trigger_condition": "fail_group_median_pct <= -35.0",
+          "finding": "不及格學生期中考後學習活動量衰退 93.2%，及格組僅衰退 85.5%。",
+          "action": "建議期中考成績公布後一週內發送個別學習提醒，對分數低於 60 分學生啟動一對一輔導追蹤。"
+        },
+        {
+          "severity": "warning",
+          "metric": "consecutive_zero_weeks",
+          "trigger_condition": "fail_group_median >= 2",
+          "finding": "不及格學生連續零活動週數中位數達 9.0 週，及格組為 9.0 週。",
+          "action": "建議設定「超過 2 週無學習活動」自動通知機制，並於關鍵週（如期中考後第 1 週）由教師主動聯繫學生。"
+        }
+      ]
     }
   }
 }

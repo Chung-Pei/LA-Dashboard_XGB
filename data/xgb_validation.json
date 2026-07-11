@@ -1,10 +1,10 @@
 {
   "week_limit": 12,
-  "auc": 0.7721,
-  "precision": 0.4967,
-  "recall": 0.3036,
-  "f1": 0.3769,
-  "accuracy": 0.8133,
+  "auc": 0.7822,
+  "precision": 0.5427,
+  "recall": 0.3501,
+  "f1": 0.4256,
+  "accuracy": 0.7994,
   "feature_version": "v3",
   "model_version": "xgb_v3",
   "training_semesters": [
@@ -14,7 +14,8 @@
     "1122",
     "1131",
     "1132",
-    "1141"
+    "1141",
+    "1142"
   ],
   "partial_truncation": true,
   "untruncated_features": [
@@ -29,23 +30,23 @@
     "4tech": {
       "high": 0.3,
       "medium": 0.3,
-      "high_precision": 0.45,
-      "n": 694
+      "high_precision": 0.5161,
+      "n": 943
     },
     "2tech": {
       "high": 0.3,
       "medium": 0.3,
-      "high_precision": 0.4161,
+      "high_precision": 0.4215,
       "n": 1963
     },
     "combined": {
       "high": 0.3,
       "medium": 0.3,
-      "high_precision": 0.4291
+      "high_precision": 0.472
     },
     "calibration_basis": "cv_proba_per_type",
-    "target_precision_4tech": 0.2594,
+    "target_precision_4tech": 0.3213,
     "target_precision_2tech": 0.16
   },
-  "generated_at": "2026-07-11T16:16:26"
+  "generated_at": "2026-07-11T17:01:54"
 }
