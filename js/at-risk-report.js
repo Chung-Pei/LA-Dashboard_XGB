@@ -697,10 +697,16 @@ const AtRiskReportManager = (() => {
       const row = document.createElement('div');
       row.className = 'r-feat-row';
 
+      // UI-FIX-3：改用 BehaviorCrossTab 共用翻譯表顯示中文譯名，
+      // 與「行為預測分析」分頁的 Top 5 預測特徵譯名一致；查無對照時 fallback 原始代號。
+      const lbl = (typeof BehaviorCrossTab !== 'undefined' && typeof BehaviorCrossTab.featureLabel === 'function')
+        ? BehaviorCrossTab.featureLabel(f.feature)
+        : { zh: f.feature ?? '', desc: '' };
+
       const name = document.createElement('div');
       name.className = 'r-feat-name';
-      name.textContent = f.feature ?? '';
-      name.title = f.feature ?? '';
+      name.textContent = lbl.zh || f.feature || '';
+      name.title = f.feature ? `${lbl.zh}（${f.feature}）` : '';
 
       const barWrap = document.createElement('div');
       barWrap.className = 'r-feat-bar';

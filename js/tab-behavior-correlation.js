@@ -407,9 +407,10 @@ const BehaviorCorrelationTab = (() => {
         : raw;
 
       // 收集可用學期（從 meta）
-      _allSemesters = Array.isArray(_corrData?.meta?.semesters)
+      // UI-FIX-4：來源 meta.semesters 為 ETL 輸出的時間升冪排列，下拉選單須由近到遠，故 slice+sort+reverse
+      _allSemesters = (Array.isArray(_corrData?.meta?.semesters)
         ? _corrData.meta.semesters
-        : (behaviorData?.meta?.semesters || []);
+        : (behaviorData?.meta?.semesters || [])).slice().sort().reverse();
       // 未完成學期（已排除於全體相關性計算，供前端標示警告用）
       _incompleteSemesters = Array.isArray(_corrData?.meta?.incomplete_semesters)
         ? _corrData.meta.incomplete_semesters

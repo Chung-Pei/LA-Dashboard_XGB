@@ -28,12 +28,31 @@ const BehaviorCrossTab = (() => {
   // [XGB-FEATURE-LABEL] Top5 預測特徵代號 → 中文語意對照。
   // MM/MQ_ratio 定義依據：19_XGBoost雙模型整合規格書v3.3 §5（10_lsa_transition.py
   // compute_lsa_by_lsa_type()）。M=教材類行為（影音/文字/輔助教材），Q=題庫作答行為。
+  // [UI-FIX-3] 補齊缺漏項目；與 at-risk-report.js「Top Risk Factors」共用本對照表
+  // （透過模組匯出的 featureLabel() 呼叫），確保兩處中文譯名一致。
+  // 沿用 tab-behavior-correlation.js FEAT_LABELS 既有中文譯名（如聽覺教材完成率、
+  // 題庫作答次數、首答正確率…），避免同一特徵在不同分頁出現不同譯名。
   const FEATURE_LABELS_ZH = {
     quz_pass_rate:      { zh: "題庫通過率",       desc: "題庫測驗中答對比例達及格標準的作答次數占比" },
     quz_cramming_ratio: { zh: "題庫集中刷題率",   desc: "作答時間集中於考前臨時抱佛腳的程度" },
     s_cluster_encoded:  { zh: "S群序列分型代碼",  desc: "序列轉移穩定性分群（S1穩定～S5高風險）轉換後的數值編碼" },
     MQ_ratio:           { zh: "教材→題庫轉換率",  desc: "學生完成教材類行為後，接續轉向題庫作答的比例（M→Q ÷ 教材總次數）" },
     MM_ratio:           { zh: "教材→教材連續率",  desc: "學生完成教材類行為後，再次接續教材類行為（未轉向題庫）的比例（M→M ÷ 教材總次數）" },
+    quz_total_attempts:         { zh: "題庫作答次數",     desc: "學生在題庫測驗中累計嘗試作答的總次數" },
+    quz_first_attempt_accuracy: { zh: "首答正確率",       desc: "每題「首次作答」即答對的比例，反映對知識點的原始掌握程度" },
+    late_night_ratio:           { zh: "深夜學習比例",     desc: "學習行為發生於深夜時段（23:00–06:00）的次數占比" },
+    aud_completion_rate:        { zh: "聽覺教材完成率",   desc: "聽覺類教材（音檔）完成度達完成門檻的比例" },
+    tut_total_minutes:          { zh: "輔導資源時間",     desc: "使用輔導資源的累計學習分鐘數" },
+    consistency_score:          { zh: "學習穩定性",       desc: "各週學習投入時間的分布穩定程度，數值越高代表學習節奏越規律" },
+    quz_score_delta:            { zh: "答題進步率",       desc: "首次作答與最終作答正確率之間的成長幅度（MG Rate）" },
+    total_learning_minutes:     { zh: "總學習時間",       desc: "學期內所有教材與題庫累計學習分鐘數" },
+    sup_completion_rate:        { zh: "補充筆記完成率",   desc: "補充筆記／整理資源完成度達完成門檻的比例" },
+    early_start_ratio:          { zh: "提早學習比例",     desc: "在教材開放後儘早開始學習（而非拖延）的行為比例" },
+    cram_pattern_score:         { zh: "臨陣磨槍指數",     desc: "學習行為集中於考前臨時衝刺、平時投入偏低的程度" },
+    active_weeks:               { zh: "活躍學習週數",     desc: "整學期中至少有一次學習行為紀錄的週數" },
+    vid_completion_rate:        { zh: "影音教材完成率",   desc: "影音類教材完成觀看進度達完成門檻的比例" },
+    txt_completion_rate:        { zh: "文字教材完成率",   desc: "文字類教材（講義／電子書）閱讀進度達完成門檻的比例" },
+    weekly_minutes_std:         { zh: "週學習時間標準差", desc: "各週學習分鐘數的離散程度，數值越高代表學習時間分布越不穩定" },
   };
   function _featureLabel(code) {
     return FEATURE_LABELS_ZH[code] || { zh: code, desc: "" };
@@ -1053,5 +1072,7 @@ const BehaviorCrossTab = (() => {
     );
   }
 
-  return { init, resetFilters };
+  // featureLabel：匯出供 at-risk-report.js「Top Risk Factors」共用，
+  // 確保與本頁「Top 5 預測特徵」使用同一份中文譯名對照表（UI-FIX-3）。
+  return { init, resetFilters, featureLabel: _featureLabel };
 })();

@@ -126,7 +126,8 @@ const BehaviorRadarTab = (() => {
       const[radarData,behaviorData]=await Promise.all([BehaviorLoader.load.radar(),BehaviorLoader.load.behavior().catch(()=>null)]);
       _radarData=radarData;_behaviorMeta=behaviorData?.meta||{};
       _behaviorStudents=_enrichBehaviorStudents(behaviorData?.students||[]);_allStudents=_behaviorStudents;
-      _allSemesters=Array.isArray(_behaviorMeta.semesters)&&_behaviorMeta.semesters.length?[..._behaviorMeta.semesters]:[];
+      // UI-FIX-4：meta.semesters 為時間升冪排列，學期膠囊按鈕須由近到遠
+      _allSemesters=Array.isArray(_behaviorMeta.semesters)&&_behaviorMeta.semesters.length?[..._behaviorMeta.semesters].sort().reverse():[];
       _selectedSemester="all";_selectedCluster="R0";_passFilter="all";_semesterFilterNote=null;
       _badgeSemText=null;_badgeTotal=null;_badgeUpdateTime=null; // B2 fix: 重載時強制重新快照
       _invalidateComputeCache();  // WARN-1：資料重載時清除快取

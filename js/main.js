@@ -3099,10 +3099,12 @@ async function autoFillSubjectFromBehavior() {
     } catch (_) { }
   }
 
-  if (courseName) {
-    input.textContent = courseName;
-    updateSubjectDisplay();
-  }
+  // UI-FIX-1：ETL 目前輸出的 course_name 為空字串（behavior.json / at_risk_profile.json
+  // 的 meta.course_name 皆為 ""），並非前端邏輯漏接，而是資料源缺漏（根因待 ETL 端補上
+  // exam_dates.json 中的 course_name 回填）。此處加上預設文字，避免徽章永久空白；
+  // 與 print-panel.js getSubjectLabel() 的 fallback 文字保持一致。
+  input.textContent = courseName || '微生物免疫學成績與學習行為儀表板';
+  updateSubjectDisplay();
 }
 
 function toggleMetaInfo() {
