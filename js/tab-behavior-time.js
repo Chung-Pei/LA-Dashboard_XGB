@@ -112,7 +112,16 @@ const BehaviorTimeTab = (() => {
 
   function _weekAvgAttempts(w) {
     if (w.avg_attempts != null) return _num(w.avg_attempts);
-    return _avg([w.pass_group_avg_attempts, w.fail_group_avg_attempts].map(_num));
+    // BUG-TIME-QUIZ-5 FIX: 兩組皆無資料時應回傳 null（代表本週無資料），
+    // 不可經 _num(null)→0 併入平均，否則會把「無資料」誤畫成「作答次數為 0」的假驟降。
+    // 兩組皆有已知人數時，改採人數加權平均，避免以人數懸殊的及格/不及格組做等權重平均而失真。
+    const pAvg = w.pass_group_avg_attempts, fAvg = w.fail_group_avg_attempts;
+    const pN = w.pass_group_active_students, fN = w.fail_group_active_students;
+    if (pAvg != null && fAvg != null && pN > 0 && fN > 0) {
+      return (pAvg * pN + fAvg * fN) / (pN + fN);
+    }
+    const parts = [pAvg, fAvg].filter(v => v != null);
+    return parts.length ? _avg(parts.map(_num)) : null;
   }
 
   function _weekActiveStudents(w) {
@@ -404,19 +413,38 @@ const BehaviorTimeTab = (() => {
 
       // 優先用含 cluster 的精確 key；若無則 fallback 至 all
       const seg  = segs[key]  ?? segs[fallbackKey];
-      const base = seg ? { ...w, ...seg } : w;
+      // BUG-TIME-QUIZ-5 FIX: 頂層 w 代表「全部學期合併」統計。
+      // 當篩選為特定學期（sem !== "all"）且該週剛好無 segment 資料時（如 1142 的 W15/W17），
+      // 絕不可 fallback 至頂層 w ── 那是跨學期混合值，並非該學期資料，
+      // 曾導致該週被誤植入其他學期的作答次數/人數/及格率（與過去修過的跨學期 anon_id 污染同一類問題）。
+      // 僅在篩選本身就是「全部年度」時，頂層 w 才是正確代表；否則該週應視為無資料。
+      const base = seg
+        ? { ...w, ...seg }
+        : (sem === "all" ? w : { week: w.week, title: w.title, is_exam_week: w.is_exam_week, exam_type: w.exam_type });
 
       let passGroupAvg = null;
       let failGroupAvg = null;
+      let passGroupN   = null;
+      let failGroupN   = null;
       if (_filterPass === "all") {
-        passGroupAvg = (segs[pKey] ?? segs[fallbackPKey])?.avg_attempts ?? null;
-        failGroupAvg = (segs[fKey] ?? segs[fallbackFKey])?.avg_attempts ?? null;
+        const pg = segs[pKey] ?? segs[fallbackPKey];
+        const fg = segs[fKey] ?? segs[fallbackFKey];
+        passGroupAvg = pg?.avg_attempts ?? null;
+        failGroupAvg = fg?.avg_attempts ?? null;
+        passGroupN   = pg?.active_students ?? null;
+        failGroupN   = fg?.active_students ?? null;
       } else if (_filterPass === "pass") {
         passGroupAvg = base.avg_attempts ?? null;
       } else {
         failGroupAvg = base.avg_attempts ?? null;
       }
-      return { ...base, pass_group_avg_attempts: passGroupAvg, fail_group_avg_attempts: failGroupAvg };
+      return {
+        ...base,
+        pass_group_avg_attempts: passGroupAvg,
+        fail_group_avg_attempts: failGroupAvg,
+        pass_group_active_students: passGroupN,
+        fail_group_active_students: failGroupN,
+      };
     });
   }
 
@@ -580,10 +608,17 @@ const BehaviorTimeTab = (() => {
                   ? `${_num(w.fail_group_avg_attempts).toFixed(1)} 次` : "—";
                 const rateVal = w.overall_pass_rate != null
                   ? `${(_num(w.overall_pass_rate) * 100).toFixed(1)}%` : "—";
-                const diff = _weekAvgAttempts(w) - semAvg;
-                const diffStr = diff >= 0
-                  ? `高於均值 +${diff.toFixed(1)} 次`
-                  : `低於均值 ${diff.toFixed(1)} 次`;
+                // BUG-TIME-QUIZ-5 FIX: 全班平均可能為 null（本週無資料），需先判斷避免算出 NaN
+                const wAvg = _weekAvgAttempts(w);
+                let diffStr;
+                if (wAvg == null) {
+                  diffStr = "本週無作答資料";
+                } else {
+                  const diff = wAvg - semAvg;
+                  diffStr = diff >= 0
+                    ? `高於均值 +${diff.toFixed(1)} 次`
+                    : `低於均值 ${diff.toFixed(1)} 次`;
+                }
                 return [
                   `及格組: ${passVal}`,
                   `不及格組: ${failVal}`,

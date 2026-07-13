@@ -942,7 +942,7 @@ const BehaviorLsaTab = (() => {
         <span class="ladash-lsa-label-bold">
           📊 怎麼看這張圖？— 白話解讀
           <span class="ladash-lsa-label-sub">
-            【${groupLabel}】M ${mPct}% ／ Q ${qPct}% ／ |Z|=${zAbs}
+            ${groupLabel} M ${mPct}% ／ Q ${qPct}% ／ |Z|=${zAbs}
           </span>
         </span>
         <span id="lsaInterpretChevron" class="ladash-lsa-chevron" data-open="${wasOpen ? '1' : '0'}">▼</span>

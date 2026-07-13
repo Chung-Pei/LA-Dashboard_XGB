@@ -92,6 +92,18 @@ const BehaviorCorrelationTab = (() => {
       border:  "1px solid rgba(80,160,255,0.45)",
       txtCls:  "text-info",
     },
+    // BUG-CORR-1 FIX: ETL 早已會輸出 reason="excluded_new_material"（見上方註解與
+    // correlation_matrix.json 實際資料），但 REASON_CONFIG 從未定義對應項目，
+    // 導致 REASON_CONFIG[reason] 查不到值，一律 fallback 顯示成 no_etl 的「∅ ETL 無此欄位」，
+    // 誤導使用者以為 ETL 沒算這個欄位；實際上 ETL 有算，只是因故排除於全量(all/all/all)計算。
+    excluded_new_material: {
+      symbol:  "新教材",
+      label:   "新增教材，全量計算暫排除",
+      detail:  "此教材類別在部分學期尚未提供或用量規模差異過大，跨學期合併(全量 all/all/all)計算會被無資料的學期拉低而失真，故暫排除{nHint}。切換至單一學期或分群可看到該學期實際 r 值。",
+      color:   "rgba(80,160,255,0.15)",
+      border:  "1px solid rgba(80,160,255,0.45)",
+      txtCls:  "text-info",
+    },
   };
 
   let _corrData     = null;
@@ -699,7 +711,7 @@ const BehaviorCorrelationTab = (() => {
     card1.className = "chart-card ladash-c-corr-inner-card";
     card1.innerHTML = `
       <h6 class="ladash-c-card-title-flex">
-        【資源使用 vs. 成績相關性】
+        資源使用 vs. 成績相關性
         <span class="ladash-c-sm-dim2">
           Pearson / Spearman 相關係數矩陣
         </span>
@@ -863,7 +875,7 @@ const BehaviorCorrelationTab = (() => {
       card3.innerHTML = `
         <div class="ladash-c-flex8-ptr" id="laggedCorrToggleRow">
           <h6 class="ladash-c-card-title-flex ladash-c-flex1">
-            ⏱ 【時間滯後相關性】
+            ⏱ 時間滯後相關性
             <span class="ladash-c-sm-dim2">
               期初行為 × 期中成績 vs 期末行為 × 期末成績預測力比較
             </span>

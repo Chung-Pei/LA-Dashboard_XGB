@@ -3666,7 +3666,7 @@ function renderD() {
 
   document.getElementById('dChartTitle').textContent =
     (filterProg === 'all' ? '全部學制' : PROGRAM_LABELS[filterProg]) +
-    '【' + (dType === 'practicum' ? '實驗課' : '正課') + '】' +
+    ' ' + (dType === 'practicum' ? '實驗課' : '正課') +
     ' — ' + metricLabel(dMetric) + ' 跨學期趨勢';
 
   // 若排除重修生，將各 class_summary row 的 _nr 欄位覆蓋到主欄位
