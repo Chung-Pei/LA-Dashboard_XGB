@@ -7,11 +7,17 @@
 // 更新：2026-06-17 docs4 新版模組與 warning/cross 資料支援
 // 更新：2026-07-11 UI-FIX-1/3/4（課程名稱徽章 fallback、XGBoost 特徵中文譯名補齊、
 //        學習行為分頁學期篩選器排序統一由近到遠）
+// 更新：2026-07-12 BUG-TIME-QUIZ-5（各週題庫作答強度：修正無 segment 週份誤植跨學期
+//        合併資料、全班平均次數改為人數加權）、BUG-CORR-1（相關性矩陣補上
+//        excluded_new_material 的 REASON_CONFIG，避免誤報「ETL 無此欄位」）、
+//        資源使用 vs. 成績相關性標題移除「【】」
+// 更新：2026-07-12（第二輪）移除其餘 3 處標題「【】」裝飾符號
+//        （⏱ 時間滯後相關性、跨學期趨勢圖標題、LSA 白話解讀副標）
 // ==========================================================
 
 const CACHE_PREFIX = 'la-dash-v11-docs-cachefix';
 const DATA_CACHE_PREFIX = 'la-dash-v11-docs-cachefix-data';
-const BUILD_VERSION = '202607111600';
+const BUILD_VERSION = '202607121800';
 
 const CACHE_VERSION = `${CACHE_PREFIX}-${BUILD_VERSION}`;
 const DATA_CACHE = `${DATA_CACHE_PREFIX}-${BUILD_VERSION}`;
