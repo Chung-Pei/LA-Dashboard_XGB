@@ -2237,6 +2237,9 @@ body.light .behavior-range-badge {
               不及格組
             </button>
           </div>
+          <!-- A-2：學習行為洞察（序列轉移分群）— 由 tab-behavior-lsa.js _renderLsaInsights() 動態注入，
+               僅選定資源分群（R1–R5）時顯示 -->
+          <div id="lsaInsightsPanel" style="display:none;margin-bottom:14px"></div>
           <!-- D3 SVG 容器 -->
           <div id="lsaGraphWrap" style="position:relative;width:100%"></div>
           <!-- 圖例說明 -->
@@ -2378,12 +2381,7 @@ body.light .behavior-range-badge {
           整合 R 群（資源使用型態）與 S 群（序列轉移型態）對期中/期末成績的相關性分析，
           並提供複合行為評分（BAS）作為早期預警依據。
         </p>
-        <p id="crossScopeNote" style="font-size:0.78rem;color:var(--text-dim,#888);margin-bottom:12px;padding:7px 10px;border-radius:5px;background:rgba(100,160,255,0.07);border:1px solid rgba(100,160,255,0.2)">
-          ℹ️ <strong>資料範圍說明：</strong>
-          本分析僅納入正課（theory）學生，實習科目（practicum）採30分制計分且60%成績未記入學習系統，已完全排除。
-          訓練集為已有期末成績之學期；尚無期末成績的最新學期為驗證學期，不納入相關性計算，
-          可於「🔮 提前預警」分頁單獨查看其預警名單。
-        </p>
+        <div id="crossScopeNote" style="margin-bottom:12px"></div>
 
         <!-- BAS / QMI 摘要卡 -->
         <div class="chart-card" style="margin-bottom:12px">
@@ -2464,11 +2462,19 @@ body.light .behavior-range-badge {
           依據訓練集（已有期末成績之學期）建立的複合行為評分（BAS）與題庫精熟指數（QMI）門檻，
           對「目前尚未有期末成績」的最新學期學生進行提前風險分級。
         </p>
-        <p style="font-size:0.78rem;color:var(--text-dim,#888);margin-bottom:12px;padding:7px 10px;border-radius:5px;background:rgba(100,160,255,0.07);border:1px solid rgba(100,160,255,0.2)">
-          ℹ️ <strong>說明：</strong>
-          目標學期由系統自動判定（取「尚無期末成績」學期中最新一筆），不綁定特定學期。
-          風險等級為相對於歷史資料的統計參考，非最終成績判定，請配合任課教師個別了解使用。
-        </p>
+        <div style="margin-bottom:12px;border-radius:5px;background:rgba(100,160,255,0.07);border:1px solid rgba(100,160,255,0.2);overflow:hidden">
+          <button type="button" id="warningInfoToggleBtn"
+            style="width:100%;text-align:left;padding:7px 10px;background:none;border:none;cursor:pointer;
+                   font-size:0.78rem;color:var(--text-dim,#888);display:flex;align-items:center;gap:6px">
+            <span id="warningInfoIcon" style="font-size:10px;color:var(--accent,#4f8ef7)">▶</span>
+            ℹ️ <strong style="color:var(--text,#dde3f5)">說明</strong>
+            <span style="font-size:10px;opacity:0.6;margin-left:auto">點擊展開</span>
+          </button>
+          <div id="warningInfoBody" style="display:none;padding:0 10px 10px 10px;font-size:0.78rem;color:var(--text-dim,#888);line-height:1.7">
+            目標學期由系統自動判定（取「尚無期末成績」學期中最新一筆），不綁定特定學期。
+            風險等級為相對於歷史資料的統計參考，非最終成績判定，請配合任課教師個別了解使用。
+          </div>
+        </div>
 
         <!-- 摘要橫幅 -->
         <div class="chart-card" style="margin-bottom:12px">
@@ -2631,29 +2637,29 @@ body.light .behavior-range-badge {
 </div>
 
 <!-- 核心篩選邏輯模組（Bug E fix: moved from <head> to guarantee defer order） -->
-<script defer src="js/filter-engine.js?v=202607121800"></script>
+<script defer src="js/filter-engine.js?v=202607161349"></script>
 <!-- 主應用邏輯（依賴 filter-engine.js 與 CDN Chart.js） -->
-<script defer src="js/main.js?v=202607121800"></script>
+<script defer src="js/main.js?v=202607161349"></script>
 
 <!-- ══ D3.js v7.9.0（LSA 有向圖，本地化：js/vendor/d3.min.js）══ -->
 <script src="js/vendor/d3.min.js"></script>
 
 <!-- ══ 學習行為模組（依賴 main.js 全域變數）══ -->
-<script defer src="js/chart-registry.js?v=202607121800"></script>
-<script defer src="js/help-modal.js?v=202607121800"></script>
-<script defer src="js/behavior-loader.js?v=202607121800"></script>
-<script defer src="js/tab-behavior-radar.js?v=202607121800"></script>
-<script defer src="js/tab-behavior-correlation.js?v=202607121800"></script>
-<script defer src="js/tab-behavior-time.js?v=202607121800"></script>
-<script defer src="js/tab-behavior-lsa.js?v=202607121800"></script>
-<script defer src="js/tab-behavior-cross.js?v=202607121800"></script>
-<script defer src="js/tab-behavior-warning.js?v=202607121800"></script>
+<script defer src="js/chart-registry.js?v=202607161349"></script>
+<script defer src="js/help-modal.js?v=202607161349"></script>
+<script defer src="js/behavior-loader.js?v=202607161349"></script>
+<script defer src="js/tab-behavior-radar.js?v=202607161349"></script>
+<script defer src="js/tab-behavior-correlation.js?v=202607161349"></script>
+<script defer src="js/tab-behavior-time.js?v=202607161349"></script>
+<script defer src="js/tab-behavior-lsa.js?v=202607161349"></script>
+<script defer src="js/tab-behavior-cross.js?v=202607161349"></script>
+<script defer src="js/tab-behavior-warning.js?v=202607161349"></script>
 
 <!-- ══ 行為初始化 + 高風險報告（依賴 behavior 模組）══ -->
-<script defer src="js/behavior-init.js?v=202607121800"></script>
-<script defer src="js/at-risk-report.js?v=202607121800"></script>
+<script defer src="js/behavior-init.js?v=202607161349"></script>
+<script defer src="js/at-risk-report.js?v=202607161349"></script>
 <!-- ══ 列印面板（依賴所有 behavior 模組與 ChartRegistry）══ -->
-<script defer src="js/print-panel.js?v=202607121800"></script>
+<script defer src="js/print-panel.js?v=202607161349"></script>
 
 
 </body>

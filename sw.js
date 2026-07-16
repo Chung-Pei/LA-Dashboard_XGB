@@ -13,11 +13,21 @@
 //        資源使用 vs. 成績相關性標題移除「【】」
 // 更新：2026-07-12（第二輪）移除其餘 3 處標題「【】」裝飾符號
 //        （⏱ 時間滯後相關性、跨學期趨勢圖標題、LSA 白話解讀副標）
+// 更新：2026-07-12（第三輪）BUG-TIME-QUIZ-6（根因修正：renderWeeklyQuiz() 週次
+//        fallback 樣板原本會給 avg_attempts 預設值 0，物件展開時蓋不掉「本來就
+//        沒有這個 key」的真實資料，導致 BUG-TIME-QUIZ-5 的加權平均/null 判斷
+//        永遠跑不到，全部年度整條「全班平均次數」線貼底。移除該預設值後才真正
+//        生效）、BUG-CORR-2（excluded_new_material 與 scale_change 本為同一概念，
+//        合併為同一份 REASON_CONFIG，避免圖例出現兩條意思相同的說明）
+// 更新：2026-07-12（第四輪）BUG-CORR-3：Δ規模 排除觸發學期後，其餘學期改用
+//        scatter_data 即時重算真實 r 值（† 角標標示），取代整格直接放棄；
+//        目前等待 ETL 補上 meta.excluded_material_detail 即自動生效，
+//        欄位補上前維持現行 Δ規模 診斷符號、不影響現有行為。
 // ==========================================================
 
 const CACHE_PREFIX = 'la-dash-v11-docs-cachefix';
 const DATA_CACHE_PREFIX = 'la-dash-v11-docs-cachefix-data';
-const BUILD_VERSION = '202607121800';
+const BUILD_VERSION = '202607161349';
 
 const CACHE_VERSION = `${CACHE_PREFIX}-${BUILD_VERSION}`;
 const DATA_CACHE = `${DATA_CACHE_PREFIX}-${BUILD_VERSION}`;
@@ -35,21 +45,21 @@ const APP_SHELL = [
   './js/vendor/chart.umd.min.js',
   './js/vendor/chartjs-plugin-annotation.min.js',
   './js/frame-guard.js',
-  './js/filter-engine.js?v=202607111600',
-  './js/main.js?v=202607111600',
+  './js/filter-engine.js?v=202607161349',
+  './js/main.js?v=202607161349',
   './js/vendor/d3.min.js',
-  './js/chart-registry.js?v=202607111600',
-  './js/help-modal.js?v=202607111600',
-  './js/behavior-loader.js?v=202607111600',
-  './js/tab-behavior-radar.js?v=202607111600',
-  './js/tab-behavior-correlation.js?v=202607111600',
-  './js/tab-behavior-time.js?v=202607111600',
-  './js/tab-behavior-lsa.js?v=202607111600',
-  './js/tab-behavior-cross.js?v=202607111600',
-  './js/tab-behavior-warning.js?v=202607111600',
-  './js/behavior-init.js?v=202607111600',
-  './js/at-risk-report.js?v=202607111600',
-  './js/print-panel.js?v=202607111600',
+  './js/chart-registry.js?v=202607161349',
+  './js/help-modal.js?v=202607161349',
+  './js/behavior-loader.js?v=202607161349',
+  './js/tab-behavior-radar.js?v=202607161349',
+  './js/tab-behavior-correlation.js?v=202607161349',
+  './js/tab-behavior-time.js?v=202607161349',
+  './js/tab-behavior-lsa.js?v=202607161349',
+  './js/tab-behavior-cross.js?v=202607161349',
+  './js/tab-behavior-warning.js?v=202607161349',
+  './js/behavior-init.js?v=202607161349',
+  './js/at-risk-report.js?v=202607161349',
+  './js/print-panel.js?v=202607161349',
 ];
 
 self.addEventListener('install', (event) => {
