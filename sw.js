@@ -27,7 +27,10 @@
 
 const CACHE_PREFIX = 'la-dash-v11-docs-cachefix';
 const DATA_CACHE_PREFIX = 'la-dash-v11-docs-cachefix-data';
-const BUILD_VERSION = '202607161349';
+// Keep this value identical to index.html's ?v= values and
+// js/behavior-loader.js DATA_VERSION.  update-dashboard-after-etl.ps1
+// updates all three as one deployment transaction.
+const BUILD_VERSION = '202607190952';
 
 const CACHE_VERSION = `${CACHE_PREFIX}-${BUILD_VERSION}`;
 const DATA_CACHE = `${DATA_CACHE_PREFIX}-${BUILD_VERSION}`;
@@ -45,21 +48,21 @@ const APP_SHELL = [
   './js/vendor/chart.umd.min.js',
   './js/vendor/chartjs-plugin-annotation.min.js',
   './js/frame-guard.js',
-  './js/filter-engine.js?v=202607161349',
-  './js/main.js?v=202607161349',
+  './js/filter-engine.js?v=202607190952',
+  './js/main.js?v=202607190952',
   './js/vendor/d3.min.js',
-  './js/chart-registry.js?v=202607161349',
-  './js/help-modal.js?v=202607161349',
-  './js/behavior-loader.js?v=202607161349',
-  './js/tab-behavior-radar.js?v=202607161349',
-  './js/tab-behavior-correlation.js?v=202607161349',
-  './js/tab-behavior-time.js?v=202607161349',
-  './js/tab-behavior-lsa.js?v=202607161349',
-  './js/tab-behavior-cross.js?v=202607161349',
-  './js/tab-behavior-warning.js?v=202607161349',
-  './js/behavior-init.js?v=202607161349',
-  './js/at-risk-report.js?v=202607161349',
-  './js/print-panel.js?v=202607161349',
+  './js/chart-registry.js?v=202607190952',
+  './js/help-modal.js?v=202607190952',
+  './js/behavior-loader.js?v=202607190952',
+  './js/tab-behavior-radar.js?v=202607190952',
+  './js/tab-behavior-correlation.js?v=202607190952',
+  './js/tab-behavior-time.js?v=202607190952',
+  './js/tab-behavior-lsa.js?v=202607190952',
+  './js/tab-behavior-cross.js?v=202607190952',
+  './js/tab-behavior-warning.js?v=202607190952',
+  './js/behavior-init.js?v=202607190952',
+  './js/at-risk-report.js?v=202607190952',
+  './js/print-panel.js?v=202607190952',
 ];
 
 self.addEventListener('install', (event) => {
