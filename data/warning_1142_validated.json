@@ -18,9 +18,9 @@
     ],
     "bas_formula": "v3.1: w_mid(local-z) + w_qmi(train-z) + w_neg_passive(train-z), renormalized",
     "generated_at": "2026-07-11T16:16:26",
-    "validation_date": "2026-07-16T05:58:09.752612+00:00",
+    "validation_date": "2026-07-11T09:30:31.404199+00:00",
     "validation_summary": {
-      "n_with_actual": 248,
+      "n_with_actual": 249,
       "auc": 0.5636,
       "calibration": {
         "HIGH": {
@@ -30,10 +30,10 @@
           "calibration_error": 0.274
         },
         "MEDIUM": {
-          "n": 88,
-          "actual_fail_rate": 0.3977,
+          "n": 89,
+          "actual_fail_rate": 0.4045,
           "predicted_fail_rate": 0.2331,
-          "calibration_error": 0.1646
+          "calibration_error": 0.1714
         },
         "LOW": {
           "n": 106,
@@ -2595,7 +2595,9 @@
         "qmi_threshold_mode": "ood",
         "qmi_q1_hi_used": 0.4333,
         "qmi_q2_hi_used": 0.5562
-      }
+      },
+      "actual_final_score": 14.414045437778837,
+      "actual_outcome": "FAIL"
     },
     {
       "masked_id": "141****52",

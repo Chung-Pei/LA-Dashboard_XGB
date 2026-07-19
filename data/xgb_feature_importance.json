@@ -2,104 +2,104 @@
   "features": [
     {
       "feature": "MQ_ratio",
-      "importance": 0.1324,
+      "importance": 0.1357,
       "rank": 1
     },
     {
       "feature": "quz_pass_rate",
-      "importance": 0.1049,
+      "importance": 0.113,
       "rank": 2
     },
     {
       "feature": "s_cluster_encoded",
-      "importance": 0.0799,
+      "importance": 0.0743,
       "rank": 3
     },
     {
-      "feature": "sup_completion_rate",
-      "importance": 0.038,
+      "feature": "MM_ratio",
+      "importance": 0.0482,
       "rank": 4
     },
     {
-      "feature": "late_night_ratio",
-      "importance": 0.0379,
+      "feature": "total_learning_minutes",
+      "importance": 0.0371,
       "rank": 5
     },
     {
-      "feature": "quz_total_attempts",
-      "importance": 0.0374,
+      "feature": "late_night_ratio",
+      "importance": 0.0357,
       "rank": 6
     },
     {
-      "feature": "tut_total_minutes",
-      "importance": 0.037,
+      "feature": "quz_total_attempts",
+      "importance": 0.0357,
       "rank": 7
     },
     {
-      "feature": "MM_ratio",
-      "importance": 0.0369,
+      "feature": "early_start_ratio",
+      "importance": 0.0345,
       "rank": 8
     },
     {
-      "feature": "consistency_score",
-      "importance": 0.0365,
+      "feature": "active_weeks",
+      "importance": 0.0343,
       "rank": 9
     },
     {
-      "feature": "policy_gaming_flag",
-      "importance": 0.0359,
+      "feature": "consistency_score",
+      "importance": 0.0341,
       "rank": 10
     },
     {
-      "feature": "quz_score_delta",
-      "importance": 0.0359,
+      "feature": "quz_cramming_ratio",
+      "importance": 0.0337,
       "rank": 11
     },
     {
-      "feature": "active_weeks",
-      "importance": 0.0352,
+      "feature": "tut_total_minutes",
+      "importance": 0.0336,
       "rank": 12
     },
     {
-      "feature": "quz_cramming_ratio",
-      "importance": 0.0348,
+      "feature": "weekly_minutes_std",
+      "importance": 0.0334,
       "rank": 13
     },
     {
-      "feature": "reading_inflation_ratio",
-      "importance": 0.0348,
+      "feature": "aud_completion_rate",
+      "importance": 0.0333,
       "rank": 14
     },
     {
-      "feature": "quz_first_attempt_accuracy",
-      "importance": 0.0343,
+      "feature": "vid_completion_rate",
+      "importance": 0.0332,
       "rank": 15
     },
     {
-      "feature": "vid_completion_rate",
-      "importance": 0.0341,
+      "feature": "quz_first_attempt_accuracy",
+      "importance": 0.0329,
       "rank": 16
     },
     {
-      "feature": "total_learning_minutes",
-      "importance": 0.0339,
+      "feature": "quz_score_delta",
+      "importance": 0.0328,
       "rank": 17
     },
     {
-      "feature": "quz_final_accuracy",
-      "importance": 0.0336,
+      "feature": "reading_inflation_ratio",
+      "importance": 0.0326,
       "rank": 18
     },
     {
-      "feature": "cram_pattern_score",
-      "importance": 0.0331,
+      "feature": "policy_gaming_flag",
+      "importance": 0.0325,
       "rank": 19
     },
     {
-      "feature": "txt_completion_rate",
+      "feature": "sup_completion_rate",
       "importance": 0.0324,
       "rank": 20
     }
   ],
-  "generated_at": "2026-07-16T13:48:10"
+  "generated_at": "2026-07-19T09:49:35"
 }
