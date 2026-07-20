@@ -13,26 +13,26 @@
   "default_semester": "114(2)",
   "course_id": "11411112000550106041358-CM",
   "course_name": "微生物及免疫學(合併班)",
-  "generated_at": "2026-07-19T09:49:39.269346",
+  "generated_at": "2026-07-20T13:13:44.560173",
   "all_semesters": {
     "semester": "all",
     "course_id": "11411112000550106041358-CM",
     "course_name": "微生物及免疫學(合併班)",
-    "generated_at": "2026-07-19T09:49:39.220860",
+    "generated_at": "2026-07-20T13:13:44.512733",
     "cohort_summary": {
-      "total_students": 2913,
+      "total_students": 2918,
       "pass_count": 2227,
       "fail_count": 679,
-      "unsettled_count": 7,
+      "unsettled_count": 12,
       "fail_rate_pct": 23.4
     },
     "metrics_comparison": {
       "text_material_completion": {
         "pass_median_normalized": 41.0,
-        "fail_median_normalized": 30.8,
-        "gap_percentage": "-24.9%",
-        "raw_pass_median": 0.3404,
-        "raw_fail_median": 0.2553
+        "fail_median_normalized": 32.0,
+        "gap_percentage": "-22.0%",
+        "raw_pass_median": 0.3333,
+        "raw_fail_median": 0.2604
       },
       "supplementary_completion": {
         "pass_median_normalized": 17.9,
@@ -49,11 +49,11 @@
         "raw_fail_median": 0.0816
       },
       "pre_exam_intensity": {
-        "pass_median_normalized": 0.0,
-        "fail_median_normalized": 0.4,
-        "gap_percentage": "+0.0%",
-        "raw_pass_median": 0.0,
-        "raw_fail_median": 0.1044
+        "pass_median_normalized": 1.3,
+        "fail_median_normalized": 1.5,
+        "gap_percentage": "+15.4%",
+        "raw_pass_median": 0.5236,
+        "raw_fail_median": 0.5949
       },
       "learning_stability": {
         "pass_median_normalized": 14.8,
@@ -83,8 +83,8 @@
         {
           "metric": "text_material_completion",
           "threshold_pct": 20,
-          "ratio_in_fail_group": 0.406,
-          "ratio_in_pass_group": 0.285
+          "ratio_in_fail_group": 0.417,
+          "ratio_in_pass_group": 0.3
         },
         {
           "metric": "supplementary_completion",
@@ -122,47 +122,47 @@
         "pass_group_median": 3.0
       },
       "post_midterm_decay_rate": {
-        "fail_group_median_pct": 8.8,
-        "pass_group_median_pct": -13.9
+        "fail_group_median_pct": 8.5,
+        "pass_group_median_pct": -14.0
       },
       "weekly_activity_series": {
         "fail_group": {
-          "Week 1": 210.0,
-          "Week 2": 222.7,
-          "Week 3": 171.0,
-          "Week 4": 237.8,
-          "Week 5": 440.5,
+          "Week 1": 240.9,
+          "Week 2": 193.7,
+          "Week 3": 169.3,
+          "Week 4": 487.4,
+          "Week 5": 190.9,
           "Week 6": 295.0,
-          "Week 7": 555.2,
-          "Week 8": 551.1,
-          "Week 9": 186.1,
-          "Week 10": 87.6,
-          "Week 11": 151.7,
-          "Week 12": 260.6,
+          "Week 7": 560.1,
+          "Week 8": 546.3,
+          "Week 9": 186.0,
+          "Week 10": 87.7,
+          "Week 11": 151.6,
+          "Week 12": 261.1,
           "Week 13": 259.4,
-          "Week 14": 335.9,
-          "Week 15": 383.4,
-          "Week 16": 878.1,
+          "Week 14": 338.4,
+          "Week 15": 382.4,
+          "Week 16": 876.0,
           "Week 17": 421.0,
           "Week 18": 349.6
         },
         "pass_group": {
-          "Week 1": 332.5,
-          "Week 2": 250.9,
-          "Week 3": 291.0,
-          "Week 4": 284.7,
-          "Week 5": 274.7,
-          "Week 6": 381.4,
-          "Week 7": 586.0,
-          "Week 8": 562.1,
-          "Week 9": 200.0,
-          "Week 10": 155.0,
-          "Week 11": 254.9,
+          "Week 1": 334.6,
+          "Week 2": 250.3,
+          "Week 3": 290.8,
+          "Week 4": 284.1,
+          "Week 5": 281.8,
+          "Week 6": 374.8,
+          "Week 7": 586.8,
+          "Week 8": 560.4,
+          "Week 9": 200.1,
+          "Week 10": 155.1,
+          "Week 11": 254.8,
           "Week 12": 164.4,
-          "Week 13": 194.9,
-          "Week 14": 344.2,
-          "Week 15": 456.1,
-          "Week 16": 502.7,
+          "Week 13": 195.2,
+          "Week 14": 345.0,
+          "Week 15": 466.6,
+          "Week 16": 491.0,
           "Week 17": 427.7,
           "Week 18": 252.9
         }
@@ -197,12 +197,12 @@
       "semester": "111(1)",
       "course_id": "11111112000550107191346-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.137113",
+      "generated_at": "2026-07-20T13:13:44.431867",
       "cohort_summary": {
-        "total_students": 479,
+        "total_students": 480,
         "pass_count": 410,
         "fail_count": 63,
-        "unsettled_count": 6,
+        "unsettled_count": 7,
         "fail_rate_pct": 13.3
       },
       "metrics_comparison": {
@@ -210,8 +210,8 @@
           "pass_median_normalized": 43.4,
           "fail_median_normalized": 38.2,
           "gap_percentage": "-12.0%",
-          "raw_pass_median": 0.3511,
-          "raw_fail_median": 0.3085
+          "raw_pass_median": 0.3438,
+          "raw_fail_median": 0.3021
         },
         "supplementary_completion": {
           "pass_median_normalized": 23.5,
@@ -228,11 +228,11 @@
           "raw_fail_median": 0.2245
         },
         "pre_exam_intensity": {
-          "pass_median_normalized": 50.0,
-          "fail_median_normalized": 50.0,
-          "gap_percentage": "+0.0%",
-          "raw_pass_median": 0.0,
-          "raw_fail_median": 0.0
+          "pass_median_normalized": 3.5,
+          "fail_median_normalized": 4.4,
+          "gap_percentage": "+25.7%",
+          "raw_pass_median": 0.3698,
+          "raw_fail_median": 0.4642
         },
         "learning_stability": {
           "pass_median_normalized": 17.6,
@@ -278,25 +278,25 @@
           "n_total": 63,
           "n_flagged": 4,
           "flagged_pct": 0.063,
-          "avg_inflation_ratio": 1.555
+          "avg_inflation_ratio": 1.554
         },
         "pass_group": {
           "n_total": 410,
           "n_flagged": 24,
           "flagged_pct": 0.059,
-          "avg_inflation_ratio": 1.699
+          "avg_inflation_ratio": 1.698
         }
       },
       "temporal_decay": {
         "available": true,
-        "midterm_week_num": 10,
+        "midterm_week_num": 9,
         "consecutive_zero_weeks": {
           "fail_group_median": 3.0,
           "pass_group_median": 2.0
         },
         "post_midterm_decay_rate": {
-          "fail_group_median_pct": 8.0,
-          "pass_group_median_pct": 10.4
+          "fail_group_median_pct": 0.6,
+          "pass_group_median_pct": 0.8
         },
         "weekly_activity_series": {
           "fail_group": {
@@ -362,12 +362,12 @@
       "semester": "111(2)",
       "course_id": "11121114000550101171224-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.151556",
+      "generated_at": "2026-07-20T13:13:44.443279",
       "cohort_summary": {
-        "total_students": 224,
+        "total_students": 225,
         "pass_count": 165,
         "fail_count": 58,
-        "unsettled_count": 1,
+        "unsettled_count": 2,
         "fail_rate_pct": 26.0
       },
       "metrics_comparison": {
@@ -375,8 +375,8 @@
           "pass_median_normalized": 39.0,
           "fail_median_normalized": 26.0,
           "gap_percentage": "-33.3%",
-          "raw_pass_median": 0.3191,
-          "raw_fail_median": 0.2128
+          "raw_pass_median": 0.3125,
+          "raw_fail_median": 0.2083
         },
         "supplementary_completion": {
           "pass_median_normalized": 14.7,
@@ -427,8 +427,8 @@
           {
             "metric": "text_material_completion",
             "threshold_pct": 20,
-            "ratio_in_fail_group": 0.466,
-            "ratio_in_pass_group": 0.358
+            "ratio_in_fail_group": 0.483,
+            "ratio_in_pass_group": 0.376
           },
           {
             "metric": "supplementary_completion",
@@ -449,7 +449,7 @@
           "n_total": 58,
           "n_flagged": 10,
           "flagged_pct": 0.172,
-          "avg_inflation_ratio": 1.345
+          "avg_inflation_ratio": 1.346
         },
         "pass_group": {
           "n_total": 165,
@@ -460,14 +460,14 @@
       },
       "temporal_decay": {
         "available": true,
-        "midterm_week_num": 10,
+        "midterm_week_num": 1,
         "consecutive_zero_weeks": {
           "fail_group_median": 3.0,
           "pass_group_median": 3.0
         },
         "post_midterm_decay_rate": {
-          "fail_group_median_pct": -9.2,
-          "pass_group_median_pct": -14.1
+          "fail_group_median_pct": 0.0,
+          "pass_group_median_pct": 0.0
         },
         "weekly_activity_series": {
           "fail_group": {
@@ -540,12 +540,12 @@
       "semester": "112(1)",
       "course_id": "11211112000550107051104-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.159006",
+      "generated_at": "2026-07-20T13:13:44.450558",
       "cohort_summary": {
-        "total_students": 507,
+        "total_students": 508,
         "pass_count": 408,
         "fail_count": 99,
-        "unsettled_count": 0,
+        "unsettled_count": 1,
         "fail_rate_pct": 19.5
       },
       "metrics_comparison": {
@@ -553,8 +553,8 @@
           "pass_median_normalized": 42.3,
           "fail_median_normalized": 41.0,
           "gap_percentage": "-3.1%",
-          "raw_pass_median": 0.3511,
-          "raw_fail_median": 0.3404
+          "raw_pass_median": 0.3438,
+          "raw_fail_median": 0.3333
         },
         "supplementary_completion": {
           "pass_median_normalized": 44.1,
@@ -571,17 +571,17 @@
           "raw_fail_median": 0.3061
         },
         "pre_exam_intensity": {
-          "pass_median_normalized": 50.0,
-          "fail_median_normalized": 50.0,
-          "gap_percentage": "+0.0%",
-          "raw_pass_median": 0.0,
-          "raw_fail_median": 0.0
+          "pass_median_normalized": 2.0,
+          "fail_median_normalized": 2.5,
+          "gap_percentage": "+25.0%",
+          "raw_pass_median": 0.8066,
+          "raw_fail_median": 0.9951
         },
         "learning_stability": {
           "pass_median_normalized": 13.5,
           "fail_median_normalized": 12.1,
           "gap_percentage": "-10.4%",
-          "raw_pass_median": 0.131,
+          "raw_pass_median": 0.1314,
           "raw_fail_median": 0.1179
         },
         "audio_material_hours": {
@@ -632,53 +632,53 @@
       },
       "temporal_decay": {
         "available": true,
-        "midterm_week_num": 10,
+        "midterm_week_num": 8,
         "consecutive_zero_weeks": {
           "fail_group_median": 3.0,
           "pass_group_median": 3.0
         },
         "post_midterm_decay_rate": {
-          "fail_group_median_pct": 23.4,
-          "pass_group_median_pct": -19.3
+          "fail_group_median_pct": 2.3,
+          "pass_group_median_pct": -24.7
         },
         "weekly_activity_series": {
           "fail_group": {
-            "Week 1": 455.9,
-            "Week 2": 385.9,
-            "Week 3": 163.9,
-            "Week 4": 545.0,
-            "Week 5": 1968.6,
-            "Week 6": 294.3,
-            "Week 7": 587.5,
-            "Week 8": 1175.2,
-            "Week 9": 99.6,
-            "Week 10": 154.8,
-            "Week 11": 231.9,
-            "Week 12": 1077.2,
+            "Week 1": 666.2,
+            "Week 2": 187.7,
+            "Week 3": 151.8,
+            "Week 4": 2246.9,
+            "Week 5": 267.1,
+            "Week 6": 293.9,
+            "Week 7": 621.1,
+            "Week 8": 1142.5,
+            "Week 9": 98.6,
+            "Week 10": 155.4,
+            "Week 11": 231.7,
+            "Week 12": 1080.5,
             "Week 13": 177.7,
-            "Week 14": 1070.4,
-            "Week 15": 288.4,
-            "Week 16": 3301.9,
+            "Week 14": 1087.5,
+            "Week 15": 281.6,
+            "Week 16": 3287.9,
             "Week 17": 20.3,
             "Week 18": 57.5
           },
           "pass_group": {
-            "Week 1": 325.1,
-            "Week 2": 359.6,
-            "Week 3": 297.5,
-            "Week 4": 479.4,
-            "Week 5": 357.0,
-            "Week 6": 367.1,
-            "Week 7": 804.2,
-            "Week 8": 947.4,
-            "Week 9": 143.0,
-            "Week 10": 155.6,
-            "Week 11": 443.0,
-            "Week 12": 139.4,
-            "Week 13": 230.0,
-            "Week 14": 503.5,
-            "Week 15": 426.4,
-            "Week 16": 1136.9,
+            "Week 1": 336.3,
+            "Week 2": 356.2,
+            "Week 3": 296.4,
+            "Week 4": 475.8,
+            "Week 5": 395.8,
+            "Week 6": 330.7,
+            "Week 7": 808.6,
+            "Week 8": 937.6,
+            "Week 9": 143.4,
+            "Week 10": 156.0,
+            "Week 11": 442.4,
+            "Week 12": 139.3,
+            "Week 13": 231.5,
+            "Week 14": 508.1,
+            "Week 15": 484.1,
+            "Week 16": 1072.8,
             "Week 17": 19.1,
             "Week 18": 28.9
           }
@@ -705,7 +705,7 @@
       "semester": "112(2)",
       "course_id": "11221114000550101221617-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.174279",
+      "generated_at": "2026-07-20T13:13:44.465920",
       "cohort_summary": {
         "total_students": 236,
         "pass_count": 172,
@@ -718,8 +718,8 @@
           "pass_median_normalized": 27.6,
           "fail_median_normalized": 16.7,
           "gap_percentage": "-39.5%",
-          "raw_pass_median": 0.2287,
-          "raw_fail_median": 0.1383
+          "raw_pass_median": 0.224,
+          "raw_fail_median": 0.1354
         },
         "supplementary_completion": {
           "pass_median_normalized": 8.8,
@@ -771,7 +771,7 @@
             "metric": "text_material_completion",
             "threshold_pct": 20,
             "ratio_in_fail_group": 0.578,
-            "ratio_in_pass_group": 0.442
+            "ratio_in_pass_group": 0.471
           },
           {
             "metric": "supplementary_completion",
@@ -876,12 +876,12 @@
       "semester": "113(1)",
       "course_id": "11311112000550106121030-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.182776",
+      "generated_at": "2026-07-20T13:13:44.473246",
       "cohort_summary": {
-        "total_students": 474,
+        "total_students": 475,
         "pass_count": 422,
         "fail_count": 52,
-        "unsettled_count": 0,
+        "unsettled_count": 1,
         "fail_rate_pct": 11.0
       },
       "metrics_comparison": {
@@ -889,8 +889,8 @@
           "pass_median_normalized": 41.0,
           "fail_median_normalized": 51.9,
           "gap_percentage": "+26.6%",
-          "raw_pass_median": 0.3404,
-          "raw_fail_median": 0.4308
+          "raw_pass_median": 0.3333,
+          "raw_fail_median": 0.4219
         },
         "supplementary_completion": {
           "pass_median_normalized": 26.5,
@@ -911,7 +911,7 @@
           "fail_median_normalized": 4.2,
           "gap_percentage": "+10.5%",
           "raw_pass_median": 0.9391,
-          "raw_fail_median": 1.0246
+          "raw_fail_median": 1.0244
         },
         "learning_stability": {
           "pass_median_normalized": 34.1,
@@ -1021,7 +1021,7 @@
       "semester": "113(2)",
       "course_id": "11321114000550101021402-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.193951",
+      "generated_at": "2026-07-20T13:13:44.484554",
       "cohort_summary": {
         "total_students": 236,
         "pass_count": 115,
@@ -1034,8 +1034,8 @@
           "pass_median_normalized": 23.7,
           "fail_median_normalized": 15.8,
           "gap_percentage": "-33.3%",
-          "raw_pass_median": 0.1915,
-          "raw_fail_median": 0.1277
+          "raw_pass_median": 0.1875,
+          "raw_fail_median": 0.125
         },
         "supplementary_completion": {
           "pass_median_normalized": 5.9,
@@ -1055,7 +1055,7 @@
           "pass_median_normalized": 3.1,
           "fail_median_normalized": 3.6,
           "gap_percentage": "+16.1%",
-          "raw_pass_median": 0.7923,
+          "raw_pass_median": 0.7921,
           "raw_fail_median": 0.9189
         },
         "learning_stability": {
@@ -1086,8 +1086,8 @@
           {
             "metric": "text_material_completion",
             "threshold_pct": 20,
-            "ratio_in_fail_group": 0.62,
-            "ratio_in_pass_group": 0.522
+            "ratio_in_fail_group": 0.628,
+            "ratio_in_pass_group": 0.539
           },
           {
             "metric": "supplementary_completion",
@@ -1192,7 +1192,7 @@
       "semester": "114(1)",
       "course_id": "11411112000550106041358-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.201305",
+      "generated_at": "2026-07-20T13:13:44.492330",
       "cohort_summary": {
         "total_students": 509,
         "pass_count": 404,
@@ -1202,11 +1202,11 @@
       },
       "metrics_comparison": {
         "text_material_completion": {
-          "pass_median_normalized": 46.0,
-          "fail_median_normalized": 36.8,
-          "gap_percentage": "-20.0%",
-          "raw_pass_median": 0.3723,
-          "raw_fail_median": 0.2979
+          "pass_median_normalized": 45.5,
+          "fail_median_normalized": 37.7,
+          "gap_percentage": "-17.1%",
+          "raw_pass_median": 0.3646,
+          "raw_fail_median": 0.3021
         },
         "supplementary_completion": {
           "pass_median_normalized": 40.0,
@@ -1226,7 +1226,7 @@
           "pass_median_normalized": 3.9,
           "fail_median_normalized": 3.0,
           "gap_percentage": "-23.1%",
-          "raw_pass_median": 0.767,
+          "raw_pass_median": 0.7669,
           "raw_fail_median": 0.591
         },
         "learning_stability": {
@@ -1364,21 +1364,21 @@
       "semester": "114(2)",
       "course_id": "11421114000550101150912-CM",
       "course_name": "微生物及免疫學(合併班)",
-      "generated_at": "2026-07-19T09:49:39.212305",
+      "generated_at": "2026-07-20T13:13:44.502646",
       "cohort_summary": {
-        "total_students": 248,
+        "total_students": 249,
         "pass_count": 131,
         "fail_count": 117,
-        "unsettled_count": 0,
+        "unsettled_count": 1,
         "fail_rate_pct": 47.2
       },
       "metrics_comparison": {
         "text_material_completion": {
-          "pass_median_normalized": 36.8,
-          "fail_median_normalized": 31.6,
-          "gap_percentage": "-14.1%",
-          "raw_pass_median": 0.2979,
-          "raw_fail_median": 0.2553
+          "pass_median_normalized": 35.9,
+          "fail_median_normalized": 32.0,
+          "gap_percentage": "-10.9%",
+          "raw_pass_median": 0.2917,
+          "raw_fail_median": 0.2604
         },
         "supplementary_completion": {
           "pass_median_normalized": 10.3,
@@ -1398,8 +1398,8 @@
           "pass_median_normalized": 5.3,
           "fail_median_normalized": 5.0,
           "gap_percentage": "-5.7%",
-          "raw_pass_median": 0.8963,
-          "raw_fail_median": 0.842
+          "raw_pass_median": 0.8973,
+          "raw_fail_median": 0.8433
         },
         "learning_stability": {
           "pass_median_normalized": 17.2,
@@ -1429,8 +1429,8 @@
           {
             "metric": "text_material_completion",
             "threshold_pct": 20,
-            "ratio_in_fail_group": 0.419,
-            "ratio_in_pass_group": 0.29
+            "ratio_in_fail_group": 0.427,
+            "ratio_in_pass_group": 0.313
           },
           {
             "metric": "supplementary_completion",
@@ -1451,7 +1451,7 @@
           "n_total": 117,
           "n_flagged": 9,
           "flagged_pct": 0.077,
-          "avg_inflation_ratio": 1.407
+          "avg_inflation_ratio": 1.408
         },
         "pass_group": {
           "n_total": 131,
