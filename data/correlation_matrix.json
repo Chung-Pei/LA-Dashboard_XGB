@@ -13,7 +13,7 @@
       "1141",
       "1142"
     ],
-    "generated_at": "2026-07-20T13:13:40",
+    "generated_at": "2026-07-24T12:13:47",
     "student_count": 2912,
     "pearson_note": "r values now wrapped in {r, p, significant} objects",
     "excluded_material_detail": [

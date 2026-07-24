@@ -20,7 +20,7 @@
     ],
     "pass_threshold": 60,
     "training_semester_range": "111(1)-114(2)",
-    "generated_at": "2026-07-20T13:13:40"
+    "generated_at": "2026-07-24T12:13:47"
   },
   "overall": {
     "n": 2905,
@@ -127,6 +127,10 @@
     "qmi_q1_2tech": 0.45,
     "qmi_q2_2tech": 0.5667
   },
+  "bas_auc": {
+    "auc": 0.7329,
+    "n": 2905
+  },
   "xgb_validation": {
     "week_limit": 12,
     "auc": 0.7766,
@@ -178,6 +182,12 @@
       "calibration_basis": "cv_proba_per_type",
       "target_precision_4tech": 0.3206,
       "target_precision_2tech": 0.16
+    },
+    "xgb_r": {
+      "r": 0.4885,
+      "p": 0.0,
+      "n": 2905,
+      "direction_note": "P(pass)=1-P(fail), aligned with BAS r direction"
     }
   },
   "feature_importance": [
