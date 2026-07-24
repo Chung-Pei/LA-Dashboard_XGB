@@ -389,6 +389,7 @@ const HELP_CONTENT = {
       { type: 'points', items: [
         '全體不及格率：訓練集中期末成績不及格學生佔比，並列出期中不及格率對照，觀察學期後段是否好轉',
         'BAS 複合評分（r）：BAS = 期中成績×0.35 + QMI×0.30 + (1−被動指數)×0.20 + log(練習次數)×0.15（皆先轉Z分數再加權），r 為 BAS 與期末成績的 Pearson 相關係數，越接近 1 代表綜合行為指標與成績正相關越強。※此為訓練集用的4項版本；「提前預警」頁籤因期中考後尚無完整作答次數，改用3項版本（不含log(練習次數)），兩者數值不可直接比較。',
+        'BAS AUC：BAS 分數取負號後計算 ROC-AUC，衡量 BAS 是否具備「分類」不及格學生的能力（而非 r 衡量的排名相關）；與 XGBoost AUC 為同一計算基礎，可直接比較數值高低',
         'QMI 五分位梯度：依題庫精熟指數切五等分，比較最低分組（Q1）與最高分組（Q5）的不及格率差距，差距越大代表 QMI 對不及格的區辨力越強',
         'R群 × 期末 Spearman（ρ）：R群為教材使用行為分群（類別變數），ρ 衡量分群與期末成績排名的等級相關；R群非品質次序，不可作線性外推解讀',
         'S群 × 期末 Spearman（ρ）：S群依序列轉移穩定性排序（S1最穩定 → S5風險最高，序列事件不足未分類者不納入計算），ρ 方向符合預期時，代表序列越不穩定成績越差',
@@ -406,6 +407,10 @@ const HELP_CONTENT = {
         desc: '衡量模型能否將「期末不及格」與「及格」學生正確排序的能力，數值越高代表排序能力越好。',
         formula: '以模型輸出的「不及格機率」為預測分數，計算 ROC 曲線下面積（AUC-ROC）',
         note: 'AUC = 0.5 等同隨機猜測；AUC = 1.0 為完美區辨。一般 ≥0.70 視為具實務參考價值。\n※ 此為 Week 12 特徵模型自身輸出機率的 AUC，與「提前預警」頁籤「預警指標說明」中系統最終風險等級（BAS+XGBoost 綜合判定後）的驗證 AUC 為不同計算基礎，數值不可直接比較。' },
+      { type: 'metric', name: 'r — 排名相關係數',
+        desc: '模型輸出的「及格機率」（1 − 不及格機率）與期末實際成績（連續分數）的 Pearson 相關係數，衡量模型排名能力，與 AUC（衡量分類能力）互補、並排呈現不需換算。',
+        formula: 'r = pearsonr(1 − 不及格機率, 期末成績)',
+        note: '數值越高代表模型預測與期末成績的排名關係越一致，方向與 BAS r（複合行為評分卡）相同，可直接比較數值高低。AUC（0.777）與 r（0.34）差距是正常現象：XGBoost 機率輸出為 [0,1] 有界分佈，線性相關係數天生低於 AUC，兩指標衡量不同面向，並非矛盾。' },
       { type: 'metric', name: 'Precision — 命中率',
         desc: '模型判定為「高風險（可能不及格）」的學生中，實際期末不及格的比例。',
         formula: 'Precision = 真陽性 ÷（真陽性 + 假陽性）',
@@ -679,6 +684,29 @@ function _injectHelpModalStyles() {
       color: var(--text-dim,#888);
       white-space: pre-wrap;
     }
+    .help-modal-summary {
+      margin-bottom: 12px;
+      font-size: .88rem;
+      color: var(--text,#dde3f5);
+      line-height: 1.6;
+    }
+    .help-modal-detail-toggle {
+      width: 100%;
+      text-align: left;
+      padding: 7px 10px;
+      margin-bottom: 8px;
+      background: rgba(100,160,255,0.07);
+      border: 1px solid rgba(100,160,255,0.2);
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .help-modal-detail-icon { font-size: 10px; color: var(--accent); }
+    .help-modal-detail-hint { font-size: 10px; opacity: 0.6; margin-left: auto; }
     body.help-modal-open { overflow: hidden; }
   `;
 
@@ -758,18 +786,61 @@ function renderHelpModal(content) {
   titleRow.appendChild(closeBtn);
   panel.appendChild(titleRow);
 
-  content.sections.forEach(sec => {
+  // ── A5（v4 重新設計）：分離白話摘要與技術段落 ──────────────
+  const summarySecs = content.sections.filter(s => s.type === 'summary');
+  const detailSecs  = content.sections.filter(s => s.type !== 'summary');
+  const hasSummary  = summarySecs.length > 0;
+
+  summarySecs.forEach(sec => {
+    const div = document.createElement('div');
+    div.className = 'help-modal-summary';
+    div.textContent = '📌 ' + sec.text;
+    panel.appendChild(div);
+  });
+
+  // 有摘要 → 技術內容預設收合；無摘要（尚未撰寫）→ 維持原行為直接展開
+  let detailContainer = panel;
+  if (hasSummary) {
+    const toggleBtn = document.createElement('button');
+    toggleBtn.type = 'button';
+    toggleBtn.className = 'help-modal-detail-toggle';
+    const iconSpan = document.createElement('span');
+    iconSpan.id = 'helpModalDetailIcon';
+    iconSpan.className = 'help-modal-detail-icon';
+    iconSpan.textContent = '▶';
+    const hintSpan = document.createElement('span');
+    hintSpan.className = 'help-modal-detail-hint';
+    hintSpan.textContent = '點擊展開';
+    toggleBtn.appendChild(iconSpan);
+    toggleBtn.appendChild(document.createTextNode(' 顯示完整說明（含公式） '));
+    toggleBtn.appendChild(hintSpan);
+    panel.appendChild(toggleBtn);
+
+    detailContainer = document.createElement('div');
+    detailContainer.id = 'helpModalDetailBody';
+    detailContainer.style.setProperty('display', 'none');
+    panel.appendChild(detailContainer);
+
+    toggleBtn.addEventListener('click', () => {
+      const open = detailContainer.style.display !== 'none';
+      detailContainer.style.setProperty('display', open ? 'none' : 'block');
+      iconSpan.textContent = open ? '▶' : '▼';
+    });
+  }
+  // ────────────────────────────────────────────────────────
+
+  detailSecs.forEach(sec => {
     if (sec.type === 'desc') {
       const p = document.createElement('div');
       p.className = 'help-modal-desc';
       p.textContent = sec.text;
-      panel.appendChild(p);
+      detailContainer.appendChild(p);
 
     } else if (sec.type === 'heading') {
       const h = document.createElement('div');
       h.className = 'help-modal-heading';
       h.textContent = sec.text;
-      panel.appendChild(h);
+      detailContainer.appendChild(h);
 
     } else if (sec.type === 'points') {
       const ul = document.createElement('ul');
@@ -779,13 +850,13 @@ function renderHelpModal(content) {
         li.textContent = it;
         ul.appendChild(li);
       });
-      panel.appendChild(ul);
+      detailContainer.appendChild(ul);
 
     } else if (sec.type === 'use') {
       const div = document.createElement('div');
       div.className = 'help-modal-use';
       div.textContent = '💡 ' + sec.text;
-      panel.appendChild(div);
+      detailContainer.appendChild(div);
 
     } else if (sec.type === 'metric') {
       const div = document.createElement('div');
@@ -817,7 +888,7 @@ function renderHelpModal(content) {
         n.textContent = sec.note;
         div.appendChild(n);
       }
-      panel.appendChild(div);
+      detailContainer.appendChild(div);
     }
   });
 

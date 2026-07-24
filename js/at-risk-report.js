@@ -1047,7 +1047,7 @@ const AtRiskReportManager = (() => {
       if (rNoData) {
         rNoData.style.setProperty('display', '');
         const msgEl = document.getElementById('rNoDataMsg');
-        if (msgEl) msgEl.textContent = `無法載入報告資料：${e.message}`;
+        if (msgEl) msgEl.textContent = '無法載入高風險報告資料，請重新整理頁面；若持續發生請聯繫系統管理員。';
       }
       console.error('[AtRiskReportManager] 初始化失敗', e);
     }

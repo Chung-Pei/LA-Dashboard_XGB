@@ -795,7 +795,8 @@ async function loadData() {
     init();
     bindStaticHandlers();
   } catch(e) {
-    document.getElementById('metaInfo').textContent = `⚠ 無法載入 data/data.json（${e.message}）`;
+    console.error('[main] 資料載入失敗', e);
+    document.getElementById('metaInfo').textContent = '⚠ 資料載入失敗，請重新整理頁面；若持續發生請聯繫系統管理員。';
   }
 }
 
@@ -856,6 +857,7 @@ function init() {
   populateFilters();
   initDSemFilter();
   populateCFilterSem();
+  restoreFilterMemory();
   renderD();
   requestAnimationFrame(() => {
     attachHelpButtons();
@@ -1755,6 +1757,7 @@ function initCPanel() {
     _syncRetakerBtn('C');
     setBType('theory');
     _resetCGeneralFilters();
+    _restoreCFilterMemory();
     _cPanelInited = true;
   }
   renderCView();
@@ -3296,6 +3299,11 @@ function _applyFilterCollapse(panel) {
   if (summaryEl && collapsed) {
     summaryEl.textContent = _buildPanelSummary(panel);
   }
+
+  if (panel === 'D') {
+    document.getElementById('dProgramBarWrap')?.classList.toggle('is-hidden', collapsed);
+    document.getElementById('dModeHint')?.classList.toggle('is-hidden', collapsed);
+  }
 }
 
 function _buildPanelSummary(panel) {
@@ -4297,6 +4305,75 @@ function renderPrintCharts() {
 }
 
 // ══════════════════════════════════════════════════════════
+// 篩選條件記憶（僅限安全子集合，見 UIUX 規劃書附錄 D）
+// ══════════════════════════════════════════════════════════
+const FilterMemory = (() => {
+  const PREFIX = 'la-filter-';
+  function save(key, value) {
+    try { localStorage.setItem(PREFIX + key, value); } catch (e) {}
+  }
+  function load(key) {
+    try { return localStorage.getItem(PREFIX + key); } catch (e) { return null; }
+  }
+  return { save, load };
+})();
+
+// 明確排除清單（絕不透過 FilterMemory 存取，僅供程式碼審閱對照，
+// 不影響邏輯——這兩個欄位的 change/input 監聽本就不會呼叫 FilterMemory.save）：
+//   aFilterSheet, aTrendSheet, cSearch, cSearchRetake
+
+// Panel A／Panel D 還原（於 init() 內、renderD() 之前呼叫）
+function restoreFilterMemory() {
+  let aRestored = false, dRestored = false;
+  const restore = (id, applyFn) => {
+    const v = FilterMemory.load(id);
+    if (v !== null) { applyFn(v); return true; }
+    return false;
+  };
+
+  if (restore('aFilterSem',     v => { const el = document.getElementById('aFilterSem');     if (el) el.value = v; })) aRestored = true;
+  if (restore('aFilterProgram', v => { const el = document.getElementById('aFilterProgram'); if (el) el.value = v; })) aRestored = true;
+  if (restore('aFilterType',    v => { const el = document.getElementById('aFilterType');    if (el) el.value = v; })) aRestored = true;
+  // 僅在確實有還原到值時，才比照使用者手動切換學期的既有邏輯重新驗證
+  // 學制/課別互斥鎖定（避免還原出「不可能存在」的組合）；首次使用（無記錄）
+  // 完全不觸發此段，行為與異動前逐字相同。
+  if (aRestored) onAFilterChange('semester');
+
+  if (restore('dFilterProgram', v => { const el = document.getElementById('dFilterProgram'); if (el) el.value = v; })) dRestored = true;
+  if (restore('setDSemMode', v => setDSemMode(v))) dRestored = true;
+  if (restore('setDType',    v => setDType(v)))   dRestored = true;
+  if (restore('setDView',    v => setDView(v)))   dRestored = true;
+  if (restore('setDMetric',  v => setDMetric(v))) dRestored = true;
+  if (dRestored) {
+    // 實驗課無期中／期末成績，還原組合若衝突則回退為學期成績（比照 setDType 既有互斥邏輯）
+    if (dType === 'practicum' && dMetric !== 'semester_score') setDMetric('semester_score');
+    _syncRetakerBtn('D');
+  }
+}
+
+// Panel C（含重補修生子區塊）還原（於 initCPanel() 首次進入、_resetCGeneralFilters() 之後呼叫）
+function _restoreCFilterMemory() {
+  let cRestored = false;
+  const restore = (id, applyFn) => {
+    const v = FilterMemory.load(id);
+    if (v !== null) { applyFn(v); return true; }
+    return false;
+  };
+
+  if (restore('cFilterSem',     v => { const el = document.getElementById('cFilterSem');     if (el) el.value = v; })) cRestored = true;
+  if (restore('cFilterProgram', v => { const el = document.getElementById('cFilterProgram'); if (el) el.value = v; })) cRestored = true;
+  // 僅在確實有還原到值時，才比照使用者手動切換學期的既有邏輯重新驗證
+  // （含學制/課別鎖定提示、重修生開關同步），首次使用（無記錄）行為不變。
+  if (cRestored) onCGeneralFilterChange('semester');
+
+  restore('setBMode', v => setBMode(v));
+  restore('setBType', v => setBType(v));
+  restore('setCType', v => setCType(v));
+  restore('setCPass', v => setCPass(v));
+  restore('setCExam', v => setCExam(v));
+}
+
+// ══════════════════════════════════════════════════════════
 // data-action 事件委派系統
 // 取代靜態 HTML 中所有 onclick 屬性
 // ══════════════════════════════════════════════════════════
@@ -4306,6 +4383,10 @@ function initDataActionDelegation() {
   const STOP_PROPAGATION_ACTIONS = new Set([
     'toggleBStatsHelp', 'toggleRRadarInfo', 'toggleWarningHelp',
     'closePopover', 'closePanelOpen', 'hidePanel',
+  ]);
+  const PERSISTABLE_ACTIONS = new Set([
+    'setDSemMode','setDType','setDView','setDMetric',
+    'setCType','setCExam','setCPass','setBMode','setBType',
   ]);
 
   document.addEventListener('click', e => {
@@ -4409,6 +4490,9 @@ function initDataActionDelegation() {
 
     if (actionMap[action]) {
       actionMap[action]();
+      if (PERSISTABLE_ACTIONS.has(action) && arg != null) {
+        FilterMemory.save(action, arg);
+      }
     } else {
       console.warn('[data-action] unknown action:', action);
     }
@@ -4422,16 +4506,34 @@ function bindStaticHandlers() {
   const byId = id => document.getElementById(id);
 
   // onchange
-  byId('aFilterSem')      ?.addEventListener('change', () => onAFilterChange('semester'));
-  byId('aFilterProgram')  ?.addEventListener('change', () => onAFilterChange('program'));
-  byId('aFilterType')     ?.addEventListener('change', () => onAFilterChange('courseType'));
+  byId('aFilterSem')      ?.addEventListener('change', () => {
+    FilterMemory.save('aFilterSem', byId('aFilterSem').value);
+    onAFilterChange('semester');
+  });
+  byId('aFilterProgram')  ?.addEventListener('change', () => {
+    FilterMemory.save('aFilterProgram', byId('aFilterProgram').value);
+    onAFilterChange('program');
+  });
+  byId('aFilterType')     ?.addEventListener('change', () => {
+    FilterMemory.save('aFilterType', byId('aFilterType').value);
+    onAFilterChange('courseType');
+  });
   byId('aFilterSheet')    ?.addEventListener('change', () => onAFilterChange('class'));
   byId('aTrendSheet')     ?.addEventListener('change', () => renderTrend());
   byId('aCompareSem')     ?.addEventListener('change', () =>
     renderVarianceBar(byId('aFilterSem').value, byId('aFilterSheet').value, byId('aFilterProgram').value));
-  byId('cFilterSem')      ?.addEventListener('change', () => onCGeneralFilterChange('semester'));
-  byId('cFilterProgram')  ?.addEventListener('change', () => onCGeneralFilterChange('program'));
-  byId('dFilterProgram')  ?.addEventListener('change', () => { _syncRetakerBtn('D'); renderD(); });
+  byId('cFilterSem')      ?.addEventListener('change', () => {
+    FilterMemory.save('cFilterSem', byId('cFilterSem').value);
+    onCGeneralFilterChange('semester');
+  });
+  byId('cFilterProgram')  ?.addEventListener('change', () => {
+    FilterMemory.save('cFilterProgram', byId('cFilterProgram').value);
+    onCGeneralFilterChange('program');
+  });
+  byId('dFilterProgram')  ?.addEventListener('change', () => {
+    FilterMemory.save('dFilterProgram', byId('dFilterProgram').value);
+    _syncRetakerBtn('D'); renderD();
+  });
 
   // oninput
   byId('cSearch')         ?.addEventListener('input', () => searchStudent());

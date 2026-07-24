@@ -31,7 +31,7 @@ const BehaviorLoader = (() => {
   // Must match sw.js BUILD_VERSION and index.html's JS ?v= parameter.
   // A new value makes every JSON request a new URL, so an older Service
   // Worker or browser HTTP cache cannot return a prior ETL result.
-  const DATA_VERSION = "202607231229";
+  const DATA_VERSION = "202607241703";
 
   // ── 同時請求去重（避免多個 Tab 並發初始化時重複 fetch）─────
   // 例：sub-warning 與 Tab R 的 lazyInit 可能在同一時刻
@@ -226,28 +226,13 @@ const BehaviorLoader = (() => {
     if (overlay) overlay.classList.toggle("is-hidden", !show);
   }
 
-  // XSS-AUDIT FIX (root cause): `msg` was interpolated into innerHTML
-  // unescaped. msg typically derives from fetch/parse error text (e.g.
-  // `載入失敗：${url}（${res.status}）` built from a JSON URL), but any
-  // caller passing a message containing "<"/"&" (or a future caller
-  // passing more dynamic text) would have it parsed as live HTML —
-  // classic stored/reflected-markup injection via innerHTML. Local
-  // escape mirrors the existing pattern in behavior-init.js (reuses a
-  // global `escapeHtml` if present, else falls back to manual escaping)
-  // so escaping discipline is consistent across modules.
-  function _escapeHtml(str) {
-    const raw = String(str ?? '');
-    return typeof escapeHtml === 'function'
-      ? escapeHtml(raw)
-      : raw.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
   function showError(containerId, msg) {
     const el = document.getElementById(containerId);
     if (!el) return;
+    console.error(`[BehaviorLoader.showError:${containerId}]`, msg);
     el.innerHTML = `
       <div class="alert alert-warning py-2 px-3 mt-3" role="alert">
-        <small>⚠️ 資料載入失敗：${_escapeHtml(msg)}</small>
+        <small>⚠️ 資料載入失敗，請重新整理頁面；若持續發生請聯繫系統管理員。</small>
       </div>`;
   }
 

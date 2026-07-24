@@ -383,6 +383,11 @@ const BehaviorCrossTab = (() => {
             <div class="cross-stat-sub">期中×0.35 + QMI×0.30 + (1−被動)×0.20 + 練習×0.15</div>
           </div>
           <div class="cross-stat-box">
+            <div class="cross-stat-label">BAS AUC</div>
+            <div class="cross-stat-value">${_crossData.bas_auc?.auc != null ? _safeText(_crossData.bas_auc.auc) : '<span class="cross-muted-note">訓練中/資料不足</span>'}</div>
+            <div class="cross-stat-sub">分類區辨力（同 XGBoost AUC 定義，取負號對齊：BAS低分=高風險）</div>
+          </div>
+          <div class="cross-stat-box">
             <div class="cross-stat-label">QMI 五分位梯度</div>
             <div class="cross-stat-value">${q1?.fail_rate != null && q5?.fail_rate != null ? `${_pct(q1.fail_rate)} → ${_pct(q5.fail_rate)}` : '<span class="cross-muted-note">訓練中/資料不足</span>'}</div>
             <div class="cross-stat-sub">${q1 && q5 ? `Q1（最低）vs Q5（最高），n=${_safeText(q1.n)}/${_safeText(q5.n)}` : '資料不足'}</div>
@@ -479,6 +484,12 @@ const BehaviorCrossTab = (() => {
             <div class="cross-stat-value cross-stat-value--sm">${(xv.f1 ?? 0).toFixed(3)} / ${(xv.accuracy ?? 0).toFixed(3)}</div>
             <div class="cross-stat-zh">綜合分數 / 整體準確率</div>
             <div class="cross-stat-desc">F1平衡命中率與召回率；準確率為整體預測正確比例</div>
+          </div>
+          <div class="cross-stat-box">
+            <div class="cross-stat-label">r</div>
+            <div class="cross-stat-value">${xv.xgb_r?.r != null ? _safeText(xv.xgb_r.r) : '<span class="cross-muted-note">訓練中/資料不足</span>'}</div>
+            <div class="cross-stat-zh">排名相關係數</div>
+            <div class="cross-stat-desc">模型預測及格機率與期末實際成績的 Pearson r，方向與 BAS r 一致，可直接並排比較</div>
           </div>
         </div>
         ${partialNote}
