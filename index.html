@@ -56,12 +56,11 @@
   --accent3:   #f7a44f;
   --accent4:   #e06c8c;
   --text:      #dde3f5;
-  --text-dim:  #6b748f;
+  --text-dim:  #8a92a8;
   --text-mid:  #9aa0b8;
   --red:       #f07070;
   --yellow:    #f0c85b;
   --blue:      #5b8af0;
-  --gray:      #6b748f;
   --green:     #64d4a8;
   --radius:    10px;
   --tab-h:     52px;
@@ -82,17 +81,16 @@ body.light {
   --surface3:  #dde0ee;
   --border:    #c8cce0;
   --border2:   #b0b6d0;
-  --accent:    #2e6edb;
+  --accent:    #225ec4;
   --accent2:   #1e9e78;
   --accent3:   #c97a10;
   --accent4:   #b83060;
   --text:      #1a1d2e;
-  --text-dim:  #6b748f;
+  --text-dim:  #5c637b;
   --text-mid:  #4a5070;
   --red:       #c04040;
   --yellow:    #b08010;
   --blue:      #2e5ec8;
-  --gray:      #6b748f;
   --green:     #1e9e78;
   --card-bg2:  #e8eaf2;
   --card-bg:   #ffffff;
@@ -513,7 +511,6 @@ body.chart-expanded-open { overflow: hidden; }
 .tag-red    { background: rgba(240,112,112,0.12); color: var(--red);    border: 1px solid rgba(240,112,112,0.2); }
 .tag-yellow { background: rgba(240,200,91,0.12);  color: var(--yellow); border: 1px solid rgba(240,200,91,0.2); }
 .tag-blue   { background: rgba(91,138,240,0.12);  color: var(--blue);   border: 1px solid rgba(91,138,240,0.2); }
-.tag-gray   { background: rgba(107,116,143,0.12); color: var(--gray);   border: 1px solid rgba(107,116,143,0.2); }
 
 /* ── TIMELINE ── */
 .timeline { position: relative; padding-left: 28px; }
@@ -2532,7 +2529,7 @@ body.light .behavior-range-badge {
     <!-- 無資料提示（ETL 尚未執行時顯示）-->
     <div id="behaviorNoData" style="display:none;text-align:center;padding:40px 20px;color:var(--text-dim,#888)">
       <div style="font-size:2rem;margin-bottom:8px">📭</div>
-      <div style="font-size:0.9rem">尚無學習行為資料。<br>請先執行 <code>python lms_etl.py</code> 產出 JSON 後重新載入。</div>
+      <div style="font-size:0.9rem">尚無學習行為資料，可能是本學期資料尚未產生。<br>請聯繫系統管理員確認後重新整理頁面。</div>
     </div>
 
   </div>
@@ -2548,7 +2545,7 @@ body.light .behavior-range-badge {
   <!-- 無資料狀態 -->
   <div id="rNoData" style="display:none;text-align:center;padding:60px 20px;color:var(--text-dim,#888)">
     <div style="font-size:2rem;margin-bottom:8px">📭</div>
-    <div id="rNoDataMsg" style="font-size:0.9rem">尚無高風險報告資料。<br>請先執行 <code>python lms_etl.py</code>（含成績資料）後重新載入。</div>
+    <div id="rNoDataMsg" style="font-size:0.9rem">尚無高風險報告資料，可能是本學期資料尚未產生。<br>請聯繫系統管理員確認後重新整理頁面。</div>
   </div>
   <!-- 報告主體（資料載入後顯示） -->
   <div id="rContent" style="display:none">
@@ -2653,29 +2650,29 @@ body.light .behavior-range-badge {
 </div>
 
 <!-- 核心篩選邏輯模組（Bug E fix: moved from <head> to guarantee defer order） -->
-<script defer src="js/filter-engine.js?v=202607231229"></script>
+<script defer src="js/filter-engine.js?v=202607241703"></script>
 <!-- 主應用邏輯（依賴 filter-engine.js 與 CDN Chart.js） -->
-<script defer src="js/main.js?v=202607231229"></script>
+<script defer src="js/main.js?v=202607241703"></script>
 
 <!-- ══ D3.js v7.9.0（LSA 有向圖，本地化：js/vendor/d3.min.js）══ -->
 <script src="js/vendor/d3.min.js"></script>
 
 <!-- ══ 學習行為模組（依賴 main.js 全域變數）══ -->
-<script defer src="js/chart-registry.js?v=202607231229"></script>
-<script defer src="js/help-modal.js?v=202607231229"></script>
-<script defer src="js/behavior-loader.js?v=202607231229"></script>
-<script defer src="js/tab-behavior-radar.js?v=202607231229"></script>
-<script defer src="js/tab-behavior-correlation.js?v=202607231229"></script>
-<script defer src="js/tab-behavior-time.js?v=202607231229"></script>
-<script defer src="js/tab-behavior-lsa.js?v=202607231229"></script>
-<script defer src="js/tab-behavior-cross.js?v=202607231229"></script>
-<script defer src="js/tab-behavior-warning.js?v=202607231229"></script>
+<script defer src="js/chart-registry.js?v=202607241703"></script>
+<script defer src="js/help-modal.js?v=202607241703"></script>
+<script defer src="js/behavior-loader.js?v=202607241703"></script>
+<script defer src="js/tab-behavior-radar.js?v=202607241703"></script>
+<script defer src="js/tab-behavior-correlation.js?v=202607241703"></script>
+<script defer src="js/tab-behavior-time.js?v=202607241703"></script>
+<script defer src="js/tab-behavior-lsa.js?v=202607241703"></script>
+<script defer src="js/tab-behavior-cross.js?v=202607241703"></script>
+<script defer src="js/tab-behavior-warning.js?v=202607241703"></script>
 
 <!-- ══ 行為初始化 + 高風險報告（依賴 behavior 模組）══ -->
-<script defer src="js/behavior-init.js?v=202607231229"></script>
-<script defer src="js/at-risk-report.js?v=202607231229"></script>
+<script defer src="js/behavior-init.js?v=202607241703"></script>
+<script defer src="js/at-risk-report.js?v=202607241703"></script>
 <!-- ══ 列印面板（依賴所有 behavior 模組與 ChartRegistry）══ -->
-<script defer src="js/print-panel.js?v=202607231229"></script>
+<script defer src="js/print-panel.js?v=202607241703"></script>
 
 
 </body>
