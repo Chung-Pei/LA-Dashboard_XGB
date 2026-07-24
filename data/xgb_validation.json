@@ -50,5 +50,11 @@
     "target_precision_4tech": 0.3206,
     "target_precision_2tech": 0.16
   },
-  "generated_at": "2026-07-20T13:13:40"
+  "xgb_r": {
+    "r": 0.4885,
+    "p": 0.0,
+    "n": 2905,
+    "direction_note": "P(pass)=1-P(fail), aligned with BAS r direction"
+  },
+  "generated_at": "2026-07-24T12:13:47"
 }
